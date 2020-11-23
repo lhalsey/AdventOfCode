@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Shared\Direction2d.fs" />
+    <Compile Include="Shared\Point2d.fs" />
+    <Compile Include="Shared\Utility.fs" />
+    <Compile Include="Shared\IntCodeInterpreter.fs" />
+    <Compile Include="Shared\ImageProvider.fs" />
+    <Content Include="Days\2019\Input\01.txt" />
+    <Content Include="Days\2019\Input\02.txt" />
+    <Content Include="Days\2019\Input\03.txt" />
+    <Content Include="Days\2019\Input\05.txt" />
+    <Content Include="Days\2019\Input\06.txt" />
+    <Content Include="Days\2019\Input\07.txt" />
+    <Content Include="Days\2019\Input\08.txt" />
+    <Content Include="Days\2019\Input\09.txt" />
+    <Content Include="Days\2019\Input\10.txt" />
+    <Content Include="Days\2019\Input\11.txt" />
+    <Content Include="Days\2019\Input\12.txt" />
+    <Content Include="Days\2019\Input\13.txt" />
+    <Content Include="Days\2019\Input\14.txt" />
+    <Content Include="Days\2019\Input\15.txt" />
+    <Content Include="Days\2019\Input\16.txt" />
+    <Content Include="Days\2019\Input\17.txt" />
+    <Content Include="Days\2019\Input\18.txt" />
+    <Content Include="Days\2019\Input\19.txt" />
+    <Content Include="Days\2019\Input\20.txt" />
+    <Content Include="Days\2019\Input\21.txt" />
+    <Content Include="Days\2019\Input\22.txt" />
+    <Content Include="Days\2019\Input\23.txt" />
+    <Content Include="Days\2019\Input\24.txt" />
+    <Content Include="Days\2019\Input\25.txt" />
+    <Compile Include="Days\2019\Day01.fs" />
+    <Compile Include="Days\2019\Day02.fs" />
+    <Compile Include="Days\2019\Day03.fs" />
+    <Compile Include="Days\2019\Day04.fs" />
+    <Compile Include="Days\2019\Day05.fs" />
+    <Compile Include="Days\2019\Day06.fs" />
+    <Compile Include="Days\2019\Day07.fs" />
+    <Compile Include="Days\2019\Day08.fs" />
+    <Compile Include="Days\2019\Day09.fs" />
+    <Compile Include="Days\2019\Day10.fs" />
+    <Compile Include="Days\2019\Day11.fs" />
+    <Compile Include="Days\2019\Day12.fs" />
+    <Compile Include="Days\2019\Day13.fs" />
+    <Compile Include="Days\2019\Day14.fs" />
+    <Compile Include="Days\2019\Day15.fs" />
+    <Compile Include="Days\2019\Day16.fs" />
+    <Compile Include="Days\2019\Day17.fs" />
+    <Compile Include="Days\2019\Day18.fs" />
+    <Compile Include="Days\2019\Day19.fs" />
+    <Compile Include="Days\2019\Day20.fs" />
+    <Compile Include="Days\2019\Day21.fs" />
+    <Compile Include="Days\2019\Day22.fs" />
+    <Compile Include="Days\2019\Day23.fs" />
+    <Compile Include="Days\2019\Day24.fs" />
+    <Compile Include="Days\2019\Day25.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FSharp.Collections.ParallelSeq" Version="1.1.4" />
+    <PackageReference Include="MathNet.Numerics.FSharp" Version="4.12.0" />
+  </ItemGroup>
+
+</Project>

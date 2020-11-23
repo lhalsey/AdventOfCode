@@ -1,0 +1,151 @@
+﻿Year|Day|Title|Desc|Url
+2015|1|Not Quite Lisp|Santa was hoping for a white Christmas, but his weather machine's "snow" function is powered by stars, and he's fresh out!|https://adventofcode.com/2015/day/1
+2015|2|I Was Told There Would Be No Math|The elves are running low on wrapping paper, and so they need to submit an order for more.|https://adventofcode.com/2015/day/2
+2015|3|Perfectly Spherical Houses in a Vacuum|Santa is delivering presents to an infinite two-dimensional grid of houses.|https://adventofcode.com/2015/day/3
+2015|4|The Ideal Stocking Stuffer|Santa needs help mining some AdventCoins (very similar to bitcoins) to use as gifts for all the economically forward-thinking little girls and boys.|https://adventofcode.com/2015/day/4
+2015|5|Doesn't He Have Intern-Elves For This?|Santa needs help figuring out which strings in his text file are naughty or nice.|https://adventofcode.com/2015/day/5
+2015|6|Probably a Fire Hazard|Because your neighbors keep defeating you in the holiday house decorating contest year after year, you've decided to deploy one million lights in a 1000x1000 grid.|https://adventofcode.com/2015/day/6
+2015|7|Some Assembly Required|This year, Santa brought little Bobby Tables a set of wires and bitwise logic gates!|https://adventofcode.com/2015/day/7
+2015|8|Matchsticks|Space on the sleigh is limited this year, and so Santa will be bringing his list as a digital copy.|https://adventofcode.com/2015/day/8
+2015|9|All in a Single Night|Every year, Santa manages to deliver all of his presents in a single night.|https://adventofcode.com/2015/day/9
+2015|10|Elves Look, Elves Say|Today, the Elves are playing a game called look-and-say.|https://adventofcode.com/2015/day/10
+2015|11|Corporate Policy|Santa's previous password expired, and he needs help choosing a new one.|https://adventofcode.com/2015/day/11
+2015|12|JSAbacusFramework.io|Santa's Accounting-Elves need help balancing the books after a recent order.|https://adventofcode.com/2015/day/12
+2015|13|Knights of the Dinner Table|In years past, the holiday feast with your family hasn't gone so well.|https://adventofcode.com/2015/day/13
+2015|14|Reindeer Olympics|This year is the Reindeer Olympics!|https://adventofcode.com/2015/day/14
+2015|15|Science for Hungry People|Today, you set out on the task of perfecting your milk-dunking cookie recipe.|https://adventofcode.com/2015/day/15
+2015|16|Aunt Sue|Your Aunt Sue has given you a wonderful gift, and you'd like to send her a thank you card.|https://adventofcode.com/2015/day/16
+2015|17|No Such Thing as Too Much|The elves bought too much eggnog again - 150 liters this time.|https://adventofcode.com/2015/day/17
+2015|18|Like a GIF For Your Yard|After the million lights incident, the fire code has gotten stricter: now, at most ten thousand lights are allowed.|https://adventofcode.com/2015/day/18
+2015|19|Medicine for Rudolph|Rudolph the Red-Nosed Reindeer is sick!|https://adventofcode.com/2015/day/19
+2015|20|Infinite Elves and Infinite Houses|To keep the Elves busy, Santa has them deliver some presents by hand, door-to-door.|https://adventofcode.com/2015/day/20
+2015|21|RPG Simulator 20XX|Little Henry Case got a new video game for Christmas.|https://adventofcode.com/2015/day/21
+2015|22|Wizard Simulator 20XX|Little Henry Case decides that defeating bosses with swords and stuff is boring.|https://adventofcode.com/2015/day/22
+2015|23|Opening the Turing Lock|Little Jane Marie just got her very first computer for Christmas from some unknown benefactor.|https://adventofcode.com/2015/day/23
+2015|24|It Hangs in the Balance|It's Christmas Eve, and Santa is loading up the sleigh for this year's deliveries.|https://adventofcode.com/2015/day/24
+2015|25|Let It Snow|Merry Christmas!|https://adventofcode.com/2015/day/25
+2016|1|No Time for a Taxicab|Santa's sleigh uses a very high-precision clock to guide its movements, and the clock's oscillator is regulated by stars.|https://adventofcode.com/2016/day/1
+2016|2|Bathroom Security|You arrive at Easter Bunny Headquarters under cover of darkness.|https://adventofcode.com/2016/day/2
+2016|3|Squares With Three Sides|Now that you can think clearly, you move deeper into the labyrinth of hallways and office furniture that makes up this part of Easter Bunny HQ.|https://adventofcode.com/2016/day/3
+2016|4|Security Through Obscurity|Finally, you come across an information kiosk with a list of rooms.|https://adventofcode.com/2016/day/4
+2016|5|How About a Nice Game of Chess?|You are faced with a security door designed by Easter Bunny engineers that seem to have acquired most of their security knowledge by watching hackingmovies.|https://adventofcode.com/2016/day/5
+2016|6|Signals and Noise|Something is jamming your communications with Santa.|https://adventofcode.com/2016/day/6
+2016|7|Internet Protocol Version 7|While snooping around the local network of EBHQ, you compile a list of IP addresses (they're IPv7, of course; IPv6 is much too limited).|https://adventofcode.com/2016/day/7
+2016|8|Two-Factor Authentication|You come across a door implementing what you can only assume is an implementation of two-factor authentication after a long game of requirementstelephone.|https://adventofcode.com/2016/day/8
+2016|9|Explosives in Cyberspace|Wandering around a secure area, you come across a datalink port to a new part of the network.|https://adventofcode.com/2016/day/9
+2016|10|Balance Bots|You come upon a factory in which many robots are zooming around handing small microchips to each other.|https://adventofcode.com/2016/day/10
+2016|11|Radioisotope Thermoelectric Generators|You come upon a column of four floors that have been entirely sealed off from the rest of the building except for a small dedicated lobby.|https://adventofcode.com/2016/day/11
+2016|12|Leonardo's Monorail|You finally reach the top floor of this building: a garden with a slanted glass ceiling.|https://adventofcode.com/2016/day/12
+2016|13|A Maze of Twisty Little Cubicles|You arrive at the first floor of this new building to discover a much less welcoming environment than the shiny atrium of the last one.|https://adventofcode.com/2016/day/13
+2016|14|One-Time Pad|In order to communicate securely with Santa while you're on this mission, you've been using a one-time pad that you generate using a pre-agreed algorithm.|https://adventofcode.com/2016/day/14
+2016|15|Timing is Everything|The halls open into an interior plaza containing a large kinetic sculpture.|https://adventofcode.com/2016/day/15
+2016|16|Dragon Checksum|You're done scanning this part of the network, but you've left traces of your presence.|https://adventofcode.com/2016/day/16
+2016|17|Two Steps Forward|You're trying to access a secure vault protected by a 4x4 grid of small rooms connected by doors.|https://adventofcode.com/2016/day/17
+2016|18|Like a Rogue|As you enter this room, you hear a loud click!|https://adventofcode.com/2016/day/18
+2016|19|An Elephant Named Joseph|The Elves contact you over a highly secure emergency channel.|https://adventofcode.com/2016/day/19
+2016|20|Firewall Rules|You'd like to set up a small hidden computer here so you can use it to get back into the network later.|https://adventofcode.com/2016/day/20
+2016|21|Scrambled Letters and Hash|The computer system you're breaking into uses a weird scrambling function to store its passwords.|https://adventofcode.com/2016/day/21
+2016|22|Grid Computing|You gain access to a massive storage cluster arranged in a grid; each storage node is only connected to the four nodes directly adjacent to it (three if the node is on an edge, two if it's in a corner).|https://adventofcode.com/2016/day/22
+2016|23|Safe Cracking|This is one of the top floors of the nicest tower in EBHQ.|https://adventofcode.com/2016/day/23
+2016|24|Air Duct Spelunking|You've finally met your match; the doors that provide access to the roof are locked tight, and all of the controls and related electronics are inaccessible.|https://adventofcode.com/2016/day/24
+2016|25|Clock Signal|You open the door and find yourself on the roof.|https://adventofcode.com/2016/day/25
+2017|1|Inverse Captcha|The night before Christmas, one of Santa's Elves calls you in a panic.|https://adventofcode.com/2017/day/1
+2017|2|Corruption Checksum|As you walk through the door, a glowing humanoid shape yells in your direction.|https://adventofcode.com/2017/day/2
+2017|3|Spiral Memory|You come across an experimental new kind of memory stored on an infinite two-dimensional grid.|https://adventofcode.com/2017/day/3
+2017|4|High-Entropy Passphrases|A new system policy has been put in place that requires all accounts to use a passphrase instead of simply a password.|https://adventofcode.com/2017/day/4
+2017|5|A Maze of Twisty Trampolines, All Alike|An urgent interrupt arrives from the CPU: it's trapped in a maze of jump instructions, and it would like assistance from any programs with spare cycles to help find the exit.|https://adventofcode.com/2017/day/5
+2017|6|Memory Reallocation|A debugger program here is having an issue: it is trying to repair a memory reallocation routine, but it keeps getting stuck in an infinite loop.|https://adventofcode.com/2017/day/6
+2017|7|Recursive Circus|Wandering further through the circuits of the computer, you come upon a tower of programs that have gotten themselves into a bit of trouble.|https://adventofcode.com/2017/day/7
+2017|8|I Heard You Like Registers|You receive a signal directly from the CPU.|https://adventofcode.com/2017/day/8
+2017|9|Stream Processing|A large stream blocks your path.|https://adventofcode.com/2017/day/9
+2017|10|Knot Hash|You come across some programs that are trying to implement a software emulation of a hash based on knot-tying.|https://adventofcode.com/2017/day/10
+2017|11|Hex Ed|Crossing the bridge, you've barely reached the other side of the stream when a program comes up to you, clearly in distress.|https://adventofcode.com/2017/day/11
+2017|12|Digital Plumber|Walking along the memory banks of the stream, you find a small village that is experiencing a little confusion: some programs can't communicate with each other.|https://adventofcode.com/2017/day/12
+2017|13|Packet Scanners|You need to cross a vast firewall.|https://adventofcode.com/2017/day/13
+2017|14|Disk Defragmentation|Suddenly, a scheduled job activates the system's disk defragmenter.|https://adventofcode.com/2017/day/14
+2017|15|Dueling Generators|Here, you encounter a pair of dueling generators.|https://adventofcode.com/2017/day/15
+2017|16|Permutation Promenade|You come upon a very unusual sight; a group of programs here appear to be dancing.|https://adventofcode.com/2017/day/16
+2017|17|Spinlock|Suddenly, whirling in the distance, you notice what looks like a massive, pixelated hurricane: a deadly spinlock.|https://adventofcode.com/2017/day/17
+2017|18|Duet|You discover a tablet containing some strange assembly code labeled simply "Duet".|https://adventofcode.com/2017/day/18
+2017|19|A Series of Tubes|Somehow, a network packet got lost and ended up here.|https://adventofcode.com/2017/day/19
+2017|20|Particle Swarm|Suddenly, the GPU contacts you, asking for help.|https://adventofcode.com/2017/day/20
+2017|21|Fractal Art|You find a program trying to generate some art.|https://adventofcode.com/2017/day/21
+2017|22|Sporifica Virus|Diagnostics indicate that the local grid computing cluster has been contaminated with the Sporifica Virus.|https://adventofcode.com/2017/day/22
+2017|23|Coprocessor Conflagration|You decide to head directly to the CPU and fix the printer from there.|https://adventofcode.com/2017/day/23
+2017|24|Electromagnetic Moat|The CPU itself is a large, black building surrounded by a bottomless pit.|https://adventofcode.com/2017/day/24
+2017|25|The Halting Problem|Following the twisty passageways deeper and deeper into the CPU, you finally reach the core of the computer.|https://adventofcode.com/2017/day/25
+2018|1|Chronal Calibration|"We've detected some temporal anomalies," one of Santa's Elves at the Temporal Anomaly Research and Detection Instrument Station tells you.|https://adventofcode.com/2018/day/1
+2018|2|Inventory Management System|You stop falling through time, catch your breath, and check the screen on the device.|https://adventofcode.com/2018/day/2
+2018|3|No Matter How You Slice It|The Elves managed to locate the chimney-squeeze prototype fabric for Santa's suit (thanks to someone who helpfully wrote its box IDs on the wall of the warehouse in the middle of the night).|https://adventofcode.com/2018/day/3
+2018|4|Repose Record|You've sneaked into another supply closet - this time, it's across from the prototype suit manufacturing lab.|https://adventofcode.com/2018/day/4
+2018|5|Alchemical Reduction|You've managed to sneak in to the prototype suit manufacturing lab.|https://adventofcode.com/2018/day/5
+2018|6|Chronal Coordinates|The device on your wrist beeps several times, and once again you feel like you're falling.|https://adventofcode.com/2018/day/6
+2018|7|The Sum of Its Parts|You find yourself standing on a snow-covered coastline; apparently, you landed a little off course.|https://adventofcode.com/2018/day/7
+2018|8|Memory Maneuver|The sleigh is much easier to pull than you'd expect for something its weight.|https://adventofcode.com/2018/day/8
+2018|9|Marble Mania|You talk to the Elves while you wait for your navigation system to initialize.|https://adventofcode.com/2018/day/9
+2018|10|The Stars Align|It's no use; your navigation system simply isn't capable of providing walking directions in the arctic circle, and certainly not in 1018.|https://adventofcode.com/2018/day/10
+2018|11|Chronal Charge|You watch the Elves and their sleigh fade into the distance as they head toward the North Pole.|https://adventofcode.com/2018/day/11
+2018|12|Subterranean Sustainability|The year 518 is significantly more underground than your history books implied.|https://adventofcode.com/2018/day/12
+2018|13|Mine Cart Madness|A crop of this size requires significant logistics to transport produce, soil, fertilizer, and so on.|https://adventofcode.com/2018/day/13
+2018|14|Chocolate Charts|You finally have a chance to look at all of the produce moving around.|https://adventofcode.com/2018/day/14
+2018|15|Beverage Bandits|Having perfected their hot chocolate, the Elves have a new problem: the Goblins that live in these caves will do anything to steal it.|https://adventofcode.com/2018/day/15
+2018|16|Chronal Classification|As you see the Elves defend their hot chocolate successfully, you go back to falling through time.|https://adventofcode.com/2018/day/16
+2018|17|Reservoir Research|You arrive in the year 18.|https://adventofcode.com/2018/day/17
+2018|18|Settlers of The North Pole|On the outskirts of the North Pole base construction project, many Elves are collecting lumber.|https://adventofcode.com/2018/day/18
+2018|19|Go With The Flow|With the Elves well on their way constructing the North Pole base, you turn your attention back to understanding the inner workings of programming the device.|https://adventofcode.com/2018/day/19
+2018|20|A Regular Map|While you were learning about instruction pointers, the Elves made considerable progress.|https://adventofcode.com/2018/day/20
+2018|21|Chronal Conversion|You should have been watching where you were going, because as you wander the new North Pole base, you trip and fall into a very deep hole!|https://adventofcode.com/2018/day/21
+2018|22|Mode Maze|This is it, your final stop: the year -483.|https://adventofcode.com/2018/day/22
+2018|23|Experimental Emergency Teleportation|Using your torch to search the darkness of the rocky cavern, you finally locate the man's friend: a small reindeer.|https://adventofcode.com/2018/day/23
+2018|24|Immune System Simulator 20XX|After a weird buzzing noise, you appear back at the man's cottage.|https://adventofcode.com/2018/day/24
+2018|25|Four-Dimensional Adventure|The reindeer's symptoms are getting worse, and neither you nor the white-bearded man have a solution.|https://adventofcode.com/2018/day/25
+2019|1|The Tyranny of the Rocket Equation|Santa has become stranded at the edge of the Solar System while delivering presents to other planets!|https://adventofcode.com/2019/day/1
+2019|2|1202 Program Alarm|On the way to your gravity assist around the Moon, your ship computer beeps angrily about a "1202 program alarm".|https://adventofcode.com/2019/day/2
+2019|3|Crossed Wires|The gravity assist was successful, and you're well on your way to the Venus refuelling station.|https://adventofcode.com/2019/day/3
+2019|4|Secure Container|You arrive at the Venus fuel depot only to discover it's protected by a password.|https://adventofcode.com/2019/day/4
+2019|5|Sunny with a Chance of Asteroids|You're starting to sweat as the ship makes its way toward Mercury.|https://adventofcode.com/2019/day/5
+2019|6|Universal Orbit Map|You've landed at the Universal Orbit Map facility on Mercury.|https://adventofcode.com/2019/day/6
+2019|7|Amplification Circuit|Based on the navigational maps, you're going to need to send more power to your ship's thrusters to reach Santa in time.|https://adventofcode.com/2019/day/7
+2019|8|Space Image Format|The Elves' spirits are lifted when they realize you have an opportunity to reboot one of their Mars rovers, and so they are curious if you would spend a brief sojourn on Mars.|https://adventofcode.com/2019/day/8
+2019|9|Sensor Boost|You've just said goodbye to the rebooted rover and left Mars when you receive a faint distress signal coming from the asteroid belt.|https://adventofcode.com/2019/day/9
+2019|10|Monitoring Station|You fly into the asteroid belt and reach the Ceres monitoring station.|https://adventofcode.com/2019/day/10
+2019|11|Space Police|On the way to Jupiter, you're pulled over by the Space Police.|https://adventofcode.com/2019/day/11
+2019|12|The N-Body Problem|The space near Jupiter is not a very safe place; you need to be careful of a big distracting red spot, extreme radiation, and a whole lot of moons swirling around.|https://adventofcode.com/2019/day/12
+2019|13|Care Package|As you ponder the solitude of space and the ever-increasing three-hour roundtrip for messages between you and Earth, you notice that the Space Mail Indicator Light is blinking.|https://adventofcode.com/2019/day/13
+2019|14|Space Stoichiometry|As you approach the rings of Saturn, your ship's low fuel indicator turns on.|https://adventofcode.com/2019/day/14
+2019|15|Oxygen System|Out here in deep space, many things can go wrong.|https://adventofcode.com/2019/day/15
+2019|16|Flawed Frequency Transmission|You're 3/4ths of the way through the gas giants.|https://adventofcode.com/2019/day/16
+2019|17|Set and Forget|An early warning system detects an incoming solar flare and automatically activates the ship's electromagnetic shield.|https://adventofcode.com/2019/day/17
+2019|18|Many-Worlds Interpretation|As you approach Neptune, a planetary security system detects you and activates a giant tractor beam on Triton!|https://adventofcode.com/2019/day/18
+2019|19|Tractor Beam|Unsure of the state of Santa's ship, you borrowed the tractor beam technology from Triton.|https://adventofcode.com/2019/day/19
+2019|20|Donut Maze|You notice a strange pattern on the surface of Pluto and land nearby to get a closer look.|https://adventofcode.com/2019/day/20
+2019|21|Springdroid Adventure|You lift off from Pluto and start flying in the direction of Santa.|https://adventofcode.com/2019/day/21
+2019|22|Slam Shuffle|There isn't much to do while you wait for the droids to repair your ship.|https://adventofcode.com/2019/day/22
+2019|23|Category Six|The droids have finished repairing as much of the ship as they can.|https://adventofcode.com/2019/day/23
+2019|24|Planet of Discord|You land on Eris, your last stop before reaching Santa.|https://adventofcode.com/2019/day/24
+2019|25|Cryostasis|As you approach Santa's ship, your sensors report two important details:|https://adventofcode.com/2019/day/25
+2020|1|Title TBC|Description TBC|https://adventofcode.com/2020/day/1
+2020|2|Title TBC|Description TBC|https://adventofcode.com/2020/day/2
+2020|3|Title TBC|Description TBC|https://adventofcode.com/2020/day/3
+2020|4|Title TBC|Description TBC|https://adventofcode.com/2020/day/4
+2020|5|Title TBC|Description TBC|https://adventofcode.com/2020/day/5
+2020|6|Title TBC|Description TBC|https://adventofcode.com/2020/day/6
+2020|7|Title TBC|Description TBC|https://adventofcode.com/2020/day/7
+2020|8|Title TBC|Description TBC|https://adventofcode.com/2020/day/8
+2020|9|Title TBC|Description TBC|https://adventofcode.com/2020/day/9
+2020|10|Title TBC|Description TBC|https://adventofcode.com/2020/day/10
+2020|11|Title TBC|Description TBC|https://adventofcode.com/2020/day/11
+2020|12|Title TBC|Description TBC|https://adventofcode.com/2020/day/12
+2020|13|Title TBC|Description TBC|https://adventofcode.com/2020/day/13
+2020|14|Title TBC|Description TBC|https://adventofcode.com/2020/day/14
+2020|15|Title TBC|Description TBC|https://adventofcode.com/2020/day/15
+2020|16|Title TBC|Description TBC|https://adventofcode.com/2020/day/16
+2020|17|Title TBC|Description TBC|https://adventofcode.com/2020/day/17
+2020|18|Title TBC|Description TBC|https://adventofcode.com/2020/day/18
+2020|19|Title TBC|Description TBC|https://adventofcode.com/2020/day/19
+2020|20|Title TBC|Description TBC|https://adventofcode.com/2020/day/20
+2020|21|Title TBC|Description TBC|https://adventofcode.com/2020/day/21
+2020|22|Title TBC|Description TBC|https://adventofcode.com/2020/day/22
+2020|23|Title TBC|Description TBC|https://adventofcode.com/2020/day/23
+2020|24|Title TBC|Description TBC|https://adventofcode.com/2020/day/24
+2020|25|Title TBC|Description TBC|https://adventofcode.com/2020/day/25
