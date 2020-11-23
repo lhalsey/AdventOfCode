@@ -1,8 +1,8 @@
 # Advent Of Code
 
-My solutions in F# for [Advent of Code](https://adventofcode.com/).
+My solutions in F# for [Advent of Code](https://adventofcode.com/2020/events).
 
-| Day | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 |
+| Day | [2015](https://adventofcode.com/2015) | [2016](https://adventofcode.com/2016) | [2017](https://adventofcode.com/2017) | [2018](https://adventofcode.com/2018) | [2019](https://adventofcode.com/2019) | [2020](https://adventofcode.com/2020) |
 | --- | ---- | ---- | ---- | ---- | ---- | ---- |
 | 1  |  |  |  |  | [2019.1](/AdventOfCode/Days/2019/Day01.fs)  |  |
 | 2  |  |  |  |  | [2019.2](/AdventOfCode/Days/2019/Day02.fs)  |  |
