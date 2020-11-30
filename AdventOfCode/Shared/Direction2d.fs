@@ -28,3 +28,8 @@ type Direction2d = { X: int; Y: int } with
 
     static member Zero = { X = 0; Y = 0 }
 
+    static member GetTurn = function
+        | 'L' -> Direction2d.TurnLeft
+        | 'R' -> Direction2d.TurnRight
+        | x -> failwithf "Invalid input: %c" x
+

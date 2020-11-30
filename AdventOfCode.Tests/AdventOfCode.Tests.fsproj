@@ -9,7 +9,12 @@
 
 
   <ItemGroup>
-    <Compile Include="Tests.fs" />
+    <Compile Include="Y2015Tests.fs" />
+    <Compile Include="Y2016Tests.fs" />
+    <Compile Include="Y2017Tests.fs" />
+    <Compile Include="Y2018Tests.fs" />
+    <Compile Include="Y2019Tests.fs" />
+    <Compile Include="Y2020Tests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

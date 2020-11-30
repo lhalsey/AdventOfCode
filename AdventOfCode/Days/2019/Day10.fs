@@ -43,7 +43,7 @@ module Day10 =
     let Part1() =
         let asteroids = getInput()
         
-        partitionSingle asteroids []
+        partitionSingle asteroids
         |> PSeq.map getDetectableAsteroidCount
         |> PSeq.max
 
@@ -56,7 +56,7 @@ module Day10 =
         let asteroids = getInput()
 
         let (station, _) =
-            partitionSingle asteroids []
+            partitionSingle asteroids
             |> PSeq.maxBy getDetectableAsteroidCount
 
         getAsteroidsByRotation station asteroids

@@ -80,5 +80,5 @@ let genClass (x: DaysType.Row) =
 let Generate() =
 
     DaysType.Load("Days.csv").Rows
-    |> Seq.filter (fun x -> x.Year = 2019)
+    //|> Seq.filter (fun x -> x.Year = 2019)
     |> Seq.iter genClass

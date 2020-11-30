@@ -1,8 +1,11 @@
 ﻿namespace AdventOfCode.Shared
 
+open System
 open System.IO
 open System.Text.RegularExpressions
 open System.Collections.Generic
+open MoreLinq.Extensions
+open FSharp.Collections.ParallelSeq
 
 module Utility =
 
@@ -33,9 +36,27 @@ module Utility =
         |> Array.toList
 
     // String
-    let split (delimiter: char) (s: string) = s.Split([| delimiter |])
+    let split (delimiter: char) (s: string) = s.Split [| delimiter |]
+
+    let splitAny (delimiters: string) (s: string) = s.Split (Seq.toArray delimiters)
+
+    let splitIntoPair (delimiter: string) (s:string) =
+        let tokens = s.Split(delimiter)
+        tokens.[0], tokens.[1]
+
+    let splitIntoPairAs (delimiter: string) f (s:string) =
+        let tokens = s.Split(delimiter)
+        f tokens.[0], f tokens.[1]
+
+    let tryParseAsInt (s: string) = match Int32.TryParse s with (true, v) -> Some v | _ -> None
+
+    let tryParseAsFloat (s: string) = match Double.TryParse s with (true, v) -> Some v | _ -> None
 
     let trim (s: string) = s.Trim()
+
+    let contains (sub: string) (s: string) = s.Contains (sub, StringComparison.CurrentCultureIgnoreCase)
+
+    let charsToStr (c: char seq) = c |> Seq.toArray |> String
 
     let (|Regex|_|) pattern input =
         let m = Regex.Match(input, pattern)
@@ -47,6 +68,27 @@ module Utility =
         |> readLines
         |> Seq.mapi (fun row str -> str |> Seq.mapi (fun col c -> ({ X = col; Y = row }, parse c)))
         |> Seq.concat
+
+    // Sequence
+
+    // Morelinq implementation is way faster than implementation on Rosetta code
+    let runLengthEncode (x: 'a seq) = x.RunLengthEncode()
+
+    let hasAtLeast n (x: 'a seq) = x.AtLeast n
+
+    let countIf f = Seq.filter f >> Seq.length
+
+    let parallelCountIf f = PSeq.filter f >> PSeq.length
+
+    let subsets (x: 'a seq) = x.Subsets()
+
+    let subsetsWithSize (size: int) (x: 'a seq) = x.Subsets(size)
+
+    let partialSort n (x: 'a seq) = x.PartialSort(n)
+
+    let findDuplicate (x: 'a seq) =
+        let cache = HashSet<'a>()
+        x |> Seq.find (cache.Add >> not)
 
     // Data structure
     let mapIntersect a b = seq {
@@ -64,13 +106,22 @@ module Utility =
         | []             -> [[x]]
         | (y :: ys) as xs -> (x::xs)::(List.map (fun x -> y::x) (insertions x ys))
 
-    let rec partitionSingle x acc = 
-        seq {
-            match x with
-            | [] -> ()
-            | h::t -> yield h, acc @ t
-                      yield! partitionSingle t (h::acc)
-            }
+    let partitionSingle x =
+        let rec partitionSingleR x acc = 
+            seq {
+                match x with
+                | [] -> ()
+                | h::t -> yield h, acc @ t
+                          yield! partitionSingleR t (h::acc)
+                }
+
+        partitionSingleR x []
+
+    // Dictionary
+    let tryFind (item: 'a) (dict: IReadOnlyDictionary<'a,_>) =
+        match dict.TryGetValue item with
+        | true, v -> Some v
+        | _ -> None
 
     // Function
     let memoise f =

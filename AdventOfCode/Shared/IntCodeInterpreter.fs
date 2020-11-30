@@ -2,10 +2,13 @@
 
 open Utility
 open System
+open ImmutableHashCollections
 
 module IntCodeInterpreter =
 
-    type MemoryMap = Map<int64, int64>
+    // Originally used FSharp.HashCollections.HashMap for improved lookup performance
+    // but Okasaki version gives up to 100% improvement over F# Map
+    type MemoryMap = HashMapOkasaki<int64, int64> 
 
     type ParameterMode = Position | Immediate | Relative
 
@@ -22,8 +25,8 @@ module IntCodeInterpreter =
 
     let private readIntCode filename = 
         readCsv filename
-        |> List.mapi (fun i x -> int64 i, Int64.Parse x)
-        |> MemoryMap
+        |> List.mapi (fun i x -> (int64 i, Int64.Parse x))
+        |> HashMapOkasaki.ofSeq
 
     type Interpreter =
         { Index: int64
@@ -37,17 +40,17 @@ module IntCodeInterpreter =
                   Memory = readIntCode file
                   IsTerminated = false }
           
-            member private __.CurrentOp =  __.Memory.[__.Index]
+            member private __.CurrentOp = __.Get __.Index
         
             member private __.Parameter (paramIndex: int) =
-                let p = __.Memory.[__.Index + 1L + (int64 paramIndex)]
+                let p = __.Get (__.Index + 1L + (int64 paramIndex))
                 let mode = getParamMode __.CurrentOp paramIndex
                 mode, p
             
             member __.CurrentOpCode = __.CurrentOp % 100L |> int
         
             member __.Get index = // Default to zero if not initialised
-                __.Memory.TryFind index |> Option.defaultValue 0L 
+                 __.Memory |> HashMapOkasaki.tryFind index |> Option.defaultValue 0L 
         
             member __.ReadParameter (paramIndex: int) =
                 match __.Parameter paramIndex with
@@ -63,7 +66,7 @@ module IntCodeInterpreter =
                     | Position,  p -> p
                     | Relative,  p -> p + __.RelativeBase
             
-                { __ with Memory = __.Memory.Add (address, value) }
+                { __ with Memory = __.Memory |> HashMapOkasaki.add address value }
             
             member __.RelativeBaseOffset offset =
                 { __ with RelativeBase = __.RelativeBase + offset }
@@ -164,11 +167,11 @@ module IntCodeInterpreter =
 
     let readFinalOutput = readOutput >> fun (o, _) -> List.last o
         
-    let getMemory address (interpreter: Interpreter) = interpreter.Memory.[address]
+    let getMemory address (interpreter: Interpreter) = interpreter.Get address
 
     let setMemory (overrides: (int64 * int64) list) (interpreter: Interpreter) =
         let memory =
             (interpreter.Memory, overrides)
-            ||> List.fold (fun acc x -> acc.Add x)
+            ||> List.fold (fun acc (address, value) -> acc |> HashMapOkasaki.add address value)
 
         { interpreter with Memory = memory }

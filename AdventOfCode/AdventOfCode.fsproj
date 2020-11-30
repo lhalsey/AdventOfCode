@@ -5,11 +5,187 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Shared\HashMapOkasaki.fs" />
     <Compile Include="Shared\Direction2d.fs" />
     <Compile Include="Shared\Point2d.fs" />
     <Compile Include="Shared\Utility.fs" />
     <Compile Include="Shared\IntCodeInterpreter.fs" />
     <Compile Include="Shared\ImageProvider.fs" />
+    
+    <Content Include="Days\2015\Input\01.txt" />
+    <Content Include="Days\2015\Input\02.txt" />
+    <Content Include="Days\2015\Input\03.txt" />
+    <Content Include="Days\2015\Input\05.txt" />
+    <Content Include="Days\2015\Input\06.txt" />
+    <Content Include="Days\2015\Input\07.txt" />
+    <Content Include="Days\2015\Input\08.txt" />
+    <Content Include="Days\2015\Input\09.txt" />
+    <Content Include="Days\2015\Input\12.txt" />
+    <Content Include="Days\2015\Input\13.txt" />
+    <Content Include="Days\2015\Input\14.txt" />
+    <Content Include="Days\2015\Input\15.txt" />
+    <Content Include="Days\2015\Input\16.txt" />
+    <Content Include="Days\2015\Input\17.txt" />
+    <Content Include="Days\2015\Input\18.txt" />
+    <Content Include="Days\2015\Input\19.txt" />
+    <Content Include="Days\2015\Input\21.txt" />
+    <Content Include="Days\2015\Input\23.txt" />
+    <Content Include="Days\2015\Input\24.txt" />
+    <Compile Include="Days\2015\Day01.fs" />
+    <Compile Include="Days\2015\Day02.fs" />
+    <Compile Include="Days\2015\Day03.fs" />
+    <Compile Include="Days\2015\Day04.fs" />
+    <Compile Include="Days\2015\Day05.fs" />
+    <Compile Include="Days\2015\Day06.fs" />
+    <Compile Include="Days\2015\Day07.fs" />
+    <Compile Include="Days\2015\Day08.fs" />
+    <Compile Include="Days\2015\Day09.fs" />
+    <Compile Include="Days\2015\Day10.fs" />
+    <Compile Include="Days\2015\Day11.fs" />
+    <Compile Include="Days\2015\Day12.fs" />
+    <Compile Include="Days\2015\Day13.fs" />
+    <Compile Include="Days\2015\Day14.fs" />
+    <Compile Include="Days\2015\Day15.fs" />
+    <Compile Include="Days\2015\Day16.fs" />
+    <Compile Include="Days\2015\Day17.fs" />
+    <Compile Include="Days\2015\Day18.fs" />
+    <Compile Include="Days\2015\Day19.fs" />
+    <Compile Include="Days\2015\Day20.fs" />
+    <Compile Include="Days\2015\Day21.fs" />
+    <Compile Include="Days\2015\Day22.fs" />
+    <Compile Include="Days\2015\Day23.fs" />
+    <Compile Include="Days\2015\Day24.fs" />
+    <Compile Include="Days\2015\Day25.fs" />
+    
+    <Content Include="Days\2016\Input\01.txt" />
+    <Content Include="Days\2016\Input\02.txt" />
+    <Content Include="Days\2016\Input\03.txt" />
+    <Content Include="Days\2016\Input\04.txt" />
+    <Content Include="Days\2016\Input\06.txt" />
+    <Content Include="Days\2016\Input\07.txt" />
+    <Content Include="Days\2016\Input\08.txt" />
+    <Content Include="Days\2016\Input\09.txt" />
+    <Content Include="Days\2016\Input\10.txt" />
+    <Content Include="Days\2016\Input\12.txt" />
+    <Content Include="Days\2016\Input\15.txt" />
+    <Content Include="Days\2016\Input\18.txt" />
+    <Content Include="Days\2016\Input\20.txt" />
+    <Content Include="Days\2016\Input\21.txt" />
+    <Content Include="Days\2016\Input\22.txt" />
+    <Content Include="Days\2016\Input\23.txt" />
+    <Content Include="Days\2016\Input\24.txt" />
+    <Content Include="Days\2016\Input\25.txt" />
+    <Compile Include="Days\2016\Day01.fs" />
+    <Compile Include="Days\2016\Day02.fs" />
+    <Compile Include="Days\2016\Day03.fs" />
+    <Compile Include="Days\2016\Day04.fs" />
+    <Compile Include="Days\2016\Day05.fs" />
+    <Compile Include="Days\2016\Day06.fs" />
+    <Compile Include="Days\2016\Day07.fs" />
+    <Compile Include="Days\2016\Day08.fs" />
+    <Compile Include="Days\2016\Day09.fs" />
+    <Compile Include="Days\2016\Day10.fs" />
+    <Compile Include="Days\2016\Day11.fs" />
+    <Compile Include="Days\2016\Day12.fs" />
+    <Compile Include="Days\2016\Day13.fs" />
+    <Compile Include="Days\2016\Day14.fs" />
+    <Compile Include="Days\2016\Day15.fs" />
+    <Compile Include="Days\2016\Day16.fs" />
+    <Compile Include="Days\2016\Day17.fs" />
+    <Compile Include="Days\2016\Day18.fs" />
+    <Compile Include="Days\2016\Day19.fs" />
+    <Compile Include="Days\2016\Day20.fs" />
+    <Compile Include="Days\2016\Day21.fs" />
+    <Compile Include="Days\2016\Day22.fs" />
+    <Compile Include="Days\2016\Day23.fs" />
+    <Compile Include="Days\2016\Day24.fs" />
+    <Compile Include="Days\2016\Day25.fs" />
+    
+    <Content Include="Days\2017\Input\01.txt" />
+    <Content Include="Days\2017\Input\02.txt" />
+    <Content Include="Days\2017\Input\04.txt" />
+    <Content Include="Days\2017\Input\05.txt" />
+    <Content Include="Days\2017\Input\06.txt" />
+    <Content Include="Days\2017\Input\07.txt" />
+    <Content Include="Days\2017\Input\08.txt" />
+    <Content Include="Days\2017\Input\09.txt" />
+    <Content Include="Days\2017\Input\10.txt" />
+    <Content Include="Days\2017\Input\11.txt" />
+    <Content Include="Days\2017\Input\12.txt" />
+    <Content Include="Days\2017\Input\13.txt" />
+    <Content Include="Days\2017\Input\16.txt" />
+    <Content Include="Days\2017\Input\18.txt" />
+    <Content Include="Days\2017\Input\19.txt" />
+    <Content Include="Days\2017\Input\20.txt" />
+    <Content Include="Days\2017\Input\21.txt" />
+    <Content Include="Days\2017\Input\22.txt" />
+    <Content Include="Days\2017\Input\23.txt" />
+    <Content Include="Days\2017\Input\24.txt" />
+    <Content Include="Days\2017\Input\25.txt" />
+    <Compile Include="Days\2017\Day01.fs" />
+    <Compile Include="Days\2017\Day02.fs" />
+    <Compile Include="Days\2017\Day03.fs" />
+    <Compile Include="Days\2017\Day04.fs" />
+    <Compile Include="Days\2017\Day05.fs" />
+    <Compile Include="Days\2017\Day06.fs" />
+    <Compile Include="Days\2017\Day07.fs" />
+    <Compile Include="Days\2017\Day08.fs" />
+    <Compile Include="Days\2017\Day09.fs" />
+    <Compile Include="Days\2017\Day10.fs" />
+    <Compile Include="Days\2017\Day11.fs" />
+    <Compile Include="Days\2017\Day12.fs" />
+    <Compile Include="Days\2017\Day13.fs" />
+    <Compile Include="Days\2017\Day14.fs" />
+    <Compile Include="Days\2017\Day15.fs" />
+    <Compile Include="Days\2017\Day16.fs" />
+    <Compile Include="Days\2017\Day17.fs" />
+    <Compile Include="Days\2017\Day18.fs" />
+    <Compile Include="Days\2017\Day19.fs" />
+    <Compile Include="Days\2017\Day20.fs" />
+    <Compile Include="Days\2017\Day21.fs" />
+    <Compile Include="Days\2017\Day22.fs" />
+    <Compile Include="Days\2017\Day23.fs" />
+    <Compile Include="Days\2017\Day24.fs" />
+    <Compile Include="Days\2017\Day25.fs" />
+
+    <Content Include="Days\2018\Input\01.txt" />
+    <Content Include="Days\2018\Input\02.txt" />
+    <Content Include="Days\2018\Input\03.txt" />
+    <Content Include="Days\2018\Input\04.txt" />
+    <Content Include="Days\2018\Input\05.txt" />
+    <Content Include="Days\2018\Input\06.txt" />
+    <Content Include="Days\2018\Input\07.txt" />
+    <Content Include="Days\2018\Input\08.txt" />
+    <Content Include="Days\2018\Input\10.txt" />
+    <Content Include="Days\2018\Input\12.txt" />
+    <Content Include="Days\2018\Input\13.txt" />
+    <Content Include="Days\2018\Input\15.txt" />
+    <Compile Include="Days\2018\Day01.fs" />
+    <Compile Include="Days\2018\Day02.fs" />
+    <Compile Include="Days\2018\Day03.fs" />
+    <Compile Include="Days\2018\Day04.fs" />
+    <Compile Include="Days\2018\Day05.fs" />
+    <Compile Include="Days\2018\Day06.fs" />
+    <Compile Include="Days\2018\Day07.fs" />
+    <Compile Include="Days\2018\Day08.fs" />
+    <Compile Include="Days\2018\Day09.fs" />
+    <Compile Include="Days\2018\Day10.fs" />
+    <Compile Include="Days\2018\Day11.fs" />
+    <Compile Include="Days\2018\Day12.fs" />
+    <Compile Include="Days\2018\Day13.fs" />
+    <Compile Include="Days\2018\Day14.fs" />
+    <Compile Include="Days\2018\Day15.fs" />
+    <Compile Include="Days\2018\Day16.fs" />
+    <Compile Include="Days\2018\Day17.fs" />
+    <Compile Include="Days\2018\Day18.fs" />
+    <Compile Include="Days\2018\Day19.fs" />
+    <Compile Include="Days\2018\Day20.fs" />
+    <Compile Include="Days\2018\Day21.fs" />
+    <Compile Include="Days\2018\Day22.fs" />
+    <Compile Include="Days\2018\Day23.fs" />
+    <Compile Include="Days\2018\Day24.fs" />
+    <Compile Include="Days\2018\Day25.fs" />
+
     <Content Include="Days\2019\Input\01.txt" />
     <Content Include="Days\2019\Input\02.txt" />
     <Content Include="Days\2019\Input\03.txt" />
@@ -59,11 +235,45 @@
     <Compile Include="Days\2019\Day23.fs" />
     <Compile Include="Days\2019\Day24.fs" />
     <Compile Include="Days\2019\Day25.fs" />
+    
+    <Compile Include="Days\2020\Day01.fs" />
+    <Compile Include="Days\2020\Day02.fs" />
+    <Compile Include="Days\2020\Day03.fs" />
+    <Compile Include="Days\2020\Day04.fs" />
+    <Compile Include="Days\2020\Day05.fs" />
+    <Compile Include="Days\2020\Day06.fs" />
+    <Compile Include="Days\2020\Day07.fs" />
+    <Compile Include="Days\2020\Day08.fs" />
+    <Compile Include="Days\2020\Day09.fs" />
+    <Compile Include="Days\2020\Day10.fs" />
+    <Compile Include="Days\2020\Day11.fs" />
+    <Compile Include="Days\2020\Day12.fs" />
+    <Compile Include="Days\2020\Day13.fs" />
+    <Compile Include="Days\2020\Day14.fs" />
+    <Compile Include="Days\2020\Day15.fs" />
+    <Compile Include="Days\2020\Day16.fs" />
+    <Compile Include="Days\2020\Day17.fs" />
+    <Compile Include="Days\2020\Day18.fs" />
+    <Compile Include="Days\2020\Day19.fs" />
+    <Compile Include="Days\2020\Day20.fs" />
+    <Compile Include="Days\2020\Day21.fs" />
+    <Compile Include="Days\2020\Day22.fs" />
+    <Compile Include="Days\2020\Day23.fs" />
+    <Compile Include="Days\2020\Day24.fs" />
+    <Compile Include="Days\2020\Day25.fs" />
+
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FSharp.Collections.ParallelSeq" Version="1.1.4" />
+    <PackageReference Include="FSharp.HashCollections" Version="0.1.1" />
+    <PackageReference Include="FSharpx.Collections" Version="2.1.3" />
     <PackageReference Include="MathNet.Numerics.FSharp" Version="4.12.0" />
+    <PackageReference Include="morelinq" Version="3.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Days\2020\Input\" />
   </ItemGroup>
 
 </Project>

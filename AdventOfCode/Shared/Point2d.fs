@@ -42,3 +42,5 @@ type Point2d = { X: int; Y: int } with
             yield __ + Direction2d.SouthWest
             yield __ + Direction2d.SouthEast
         }
+
+    member __.GetAllAdjacent() = seq { yield! __.GetAdjacent(); yield! __.GetDiagonalAdjacent() }

@@ -46,7 +46,7 @@ module Day12 =
         { Position = moon.Position + velocity; Velocity = velocity }
 
     let updateMoons moons =
-        partitionSingle moons [] // Compare each moon against all other moons
+        partitionSingle moons // Compare each moon against all other moons
         |> Seq.toList
         |> List.map updateMoon
 

@@ -4,7 +4,7 @@ open AdventOfCode.Days.Y2019
 open Xunit
 open FsUnit.Xunit
 
-module Tests =
+module ``Y2019 Tests`` =
 
     [<Fact>]
     let ``Day 01 Part 1`` () = Day01.Part1()  |> should equal 3_305_115
