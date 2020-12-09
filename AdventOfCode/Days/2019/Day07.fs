@@ -1,7 +1,7 @@
 ﻿namespace AdventOfCode.Days.Y2019
 
 open AdventOfCode.Shared.Utility
-open AdventOfCode.Shared.IntCodeInterpreter
+open AdventOfCode.Days.Y2019.Shared.IntCodeInterpreter
 open FSharp.Collections.ParallelSeq
 
 /// Day 7: Amplification Circuit

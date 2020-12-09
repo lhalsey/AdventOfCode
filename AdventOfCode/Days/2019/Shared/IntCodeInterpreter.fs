@@ -1,6 +1,6 @@
-﻿namespace AdventOfCode.Shared
+﻿namespace AdventOfCode.Days.Y2019.Shared
 
-open Utility
+open AdventOfCode.Shared.Utility
 open System
 open ImmutableHashCollections
 

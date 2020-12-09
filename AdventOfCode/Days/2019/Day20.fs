@@ -34,14 +34,13 @@ module Day20 =
         | (a, b) when Char.IsLetter a && Char.IsLetter b -> (min a b, max a b) |> hash |> char
         | (_, b) -> b
 
-    let getCell charGroup =
-        match Array.toList charGroup with
-        | a::b::'.'::[] when Char.IsLetter a && Char.IsLetter b -> getPortal (a, b)
-        | '.'::b::a::[] when Char.IsLetter a && Char.IsLetter b -> getPortal (a, b)
-        | a::b::' '::[] when Char.IsLetter a && Char.IsLetter b -> ' '
-        | ' '::b::a::[] when Char.IsLetter a && Char.IsLetter b -> ' '
-        | _::'#'::_::[] -> ' '
-        | _::b::_::[] -> b
+    let getCell = function
+        | [| a; b; '.'|] when Char.IsLetter a && Char.IsLetter b -> getPortal (a, b)
+        | [| '.'; b; a|] when Char.IsLetter a && Char.IsLetter b -> getPortal (a, b)
+        | [| a; b; ' '|] when Char.IsLetter a && Char.IsLetter b -> ' '
+        | [| ' '; b; a|] when Char.IsLetter a && Char.IsLetter b -> ' '
+        | [| _; '#'; _|] -> ' '
+        | [| _; b; _|] -> b
         | x -> failwithf "Invalid input: %A" x
 
     let getMap() =

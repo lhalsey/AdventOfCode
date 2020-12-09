@@ -6,7 +6,7 @@ open BenchmarkDotNet.Reports
 open BenchmarkDotNet.Jobs
 open BenchmarkDotNet.Columns
 open Perfolizer.Horology
-open AdventOfCode.Days.Y2015 // Change year to run other benchmarks
+open AdventOfCode.Days.Y2020 // Change year to run other benchmarks
 
 module Program =
 
@@ -26,10 +26,10 @@ module Program =
         //[<Benchmark>] member __.Day06_Part2() = Day06.Part2()
         //[<Benchmark>] member __.Day07_Part1() = Day07.Part1()
         //[<Benchmark>] member __.Day07_Part2() = Day07.Part2()
-        //[<Benchmark>] member __.Day08_Part1() = Day08.Part1()
-        //[<Benchmark>] member __.Day08_Part2() = Day08.Part2()
-        //[<Benchmark>] member __.Day09_Part1() = Day09.Part1()
-        //[<Benchmark>] member __.Day09_Part2() = Day09.Part2()
+        [<Benchmark>] member __.Day08_Part1() = Day08.Part1()
+        [<Benchmark>] member __.Day08_Part2() = Day08.Part2()
+        [<Benchmark>] member __.Day09_Part1() = Day09.Part1()
+        [<Benchmark>] member __.Day09_Part2() = Day09.Part2()
         //[<Benchmark>] member __.Day10_Part1() = Day10.Part1()
         //[<Benchmark>] member __.Day10_Part2() = Day10.Part2()
         //[<Benchmark>] member __.Day11_Part1() = Day11.Part1()
@@ -40,8 +40,8 @@ module Program =
         //[<Benchmark>] member __.Day13_Part2() = Day13.Part2()
         //[<Benchmark>] member __.Day14_Part1() = Day14.Part1()
         //[<Benchmark>] member __.Day14_Part2() = Day14.Part2()
-        [<Benchmark>] member __.Day15_Part1() = Day15.Part1()
-        [<Benchmark>] member __.Day15_Part2() = Day15.Part2()
+        //[<Benchmark>] member __.Day15_Part1() = Day15.Part1()
+        //[<Benchmark>] member __.Day15_Part2() = Day15.Part2()
         //[<Benchmark>] member __.Day16_Part1() = Day16.Part1()
         //[<Benchmark>] member __.Day16_Part2() = Day16.Part2()
         //[<Benchmark>] member __.Day17_Part1() = Day17.Part1()

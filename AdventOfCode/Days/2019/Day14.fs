@@ -23,7 +23,8 @@ module Day14 =
     // E.g. "1 RNQHX, 1 LFKRJ, 1 JNGM => 8 DSRGV"
     let getReaction (s: string) =
         let chemicals =
-            s.Split ([|'='; '>'; ' '; ','|], StringSplitOptions.RemoveEmptyEntries)
+            s
+            |> splitAny "=> ,"
             |> Array.toList
             |> List.chunkBySize 2 
             |> List.map getChemical

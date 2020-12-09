@@ -26,20 +26,13 @@ module Day23 =
 
     let jump offset state = { state with Index = state.Index + offset }
 
-    let parse (s: string) =
-        let tokens = s |> split ' ' |> Array.toList
-
-        let (|Int|_|) = tryParseAsInt
-
-        let l = [ yield! split ' ' s ]
-
-        match tokens with
-        | "hlf"::reg::[] -> Half reg
-        | "tpl"::reg::[] -> Triple reg
-        | "inc"::reg::[] -> Increment reg
-        | "jmp"::Int offset::[] -> Jump offset
-        | "jie"::reg::Int offset::[] -> JumpIfEven (reg.TrimEnd(','), offset)
-        | "jio"::reg::Int offset::[] -> JumpIfOne (reg.TrimEnd(','), offset)
+    let parse = split ' ' >> function
+        | [| "hlf"; reg |] -> Half reg
+        | [| "tpl"; reg |] -> Triple reg
+        | [| "inc"; reg |] -> Increment reg
+        | [| "jmp"; Int offset |] -> Jump offset
+        | [| "jie"; reg; Int offset |] -> JumpIfEven (reg.TrimEnd(','), offset)
+        | [| "jio"; reg; Int offset |] -> JumpIfOne (reg.TrimEnd(','), offset)
         | x -> failwithf "Invalid input: %A" x
 
     let parseInput() = getFile (2015, 23) |> readLinesAs parse |> Seq.toArray

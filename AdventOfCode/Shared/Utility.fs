@@ -24,6 +24,10 @@ module Utility =
         filename
         |> File.ReadLines
 
+    let readAllLines filename =
+        filename
+        |> File.ReadAllLines
+
     let readLinesAs f filename =
         filename
         |> File.ReadLines
@@ -38,7 +42,10 @@ module Utility =
     // String
     let split (delimiter: char) (s: string) = s.Split [| delimiter |]
 
-    let splitAny (delimiters: string) (s: string) = s.Split (Seq.toArray delimiters)
+    let splitOn (delimiter: string) (s: string) = s.Split delimiter
+
+    let splitAny (delimiters: string) (s: string) =
+        s.Split(Seq.toArray delimiters, StringSplitOptions.RemoveEmptyEntries)
 
     let splitIntoPair (delimiter: string) (s:string) =
         let tokens = s.Split(delimiter)
@@ -57,11 +64,6 @@ module Utility =
     let contains (sub: string) (s: string) = s.Contains (sub, StringComparison.CurrentCultureIgnoreCase)
 
     let charsToStr (c: char seq) = c |> Seq.toArray |> String
-
-    let (|Regex|_|) pattern input =
-        let m = Regex.Match(input, pattern)
-        if m.Success then Some(List.tail [ for g in m.Groups -> g.Value ])
-        else None
 
     let parseGrid (parse: char -> 'a) (s: string) =
         s
@@ -86,9 +88,13 @@ module Utility =
 
     let partialSort n (x: 'a seq) = x.PartialSort(n)
 
+    let takeEvery n (x: 'a seq) = x.TakeEvery n
+
     let findDuplicate (x: 'a seq) =
         let cache = HashSet<'a>()
         x |> Seq.find (cache.Add >> not)
+
+    let toReadOnlyHashSet (elems: 'a seq) = HashSet<'a>(elems) :> IReadOnlySet<'a>
 
     // Data structure
     let mapIntersect a b = seq {
@@ -116,6 +122,13 @@ module Utility =
                 }
 
         partitionSingleR x []
+
+    let rec uniquePairs elems = 
+        seq { 
+            match elems with
+            | h::t -> for elem in t -> h, elem
+                      yield! uniquePairs t
+            | _ -> () }
 
     // Dictionary
     let tryFind (item: 'a) (dict: IReadOnlyDictionary<'a,_>) =
@@ -179,3 +192,13 @@ module Utility =
                     visited.Add child |> ignore
             }
 
+    // Active patterns
+    let (|Int|_|) = tryParseAsInt
+
+    let (|Regex|_|) pattern input =
+        let m = Regex.Match(input, pattern)
+        if m.Success then Some(List.tail [ for g in m.Groups -> g.Value ])
+        else None
+
+    // Custom Operators
+    let inline (>=<) lowest highest value = value >= lowest && value <= highest

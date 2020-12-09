@@ -1,7 +1,7 @@
 namespace AdventOfCode.Days.Y2019
 
 open AdventOfCode.Shared.Utility
-open AdventOfCode.Shared.IntCodeInterpreter
+open AdventOfCode.Days.Y2019.Shared.IntCodeInterpreter
 
 /// Day 23: Category Six
 /// https://adventofcode.com/2019/day/23

@@ -4,12 +4,15 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Include="Shared\HashMapOkasaki.fs" />
     <Compile Include="Shared\Direction2d.fs" />
     <Compile Include="Shared\Point2d.fs" />
     <Compile Include="Shared\Utility.fs" />
-    <Compile Include="Shared\IntCodeInterpreter.fs" />
     <Compile Include="Shared\ImageProvider.fs" />
     
     <Content Include="Days\2015\Input\01.txt" />
@@ -185,7 +188,8 @@
     <Compile Include="Days\2018\Day23.fs" />
     <Compile Include="Days\2018\Day24.fs" />
     <Compile Include="Days\2018\Day25.fs" />
-
+    <Content Include="Days\2018\Input\17.txt" />
+    <Compile Include="Days\2019\Shared\IntCodeInterpreter.fs" />
     <Content Include="Days\2019\Input\01.txt" />
     <Content Include="Days\2019\Input\02.txt" />
     <Content Include="Days\2019\Input\03.txt" />
@@ -235,7 +239,16 @@
     <Compile Include="Days\2019\Day23.fs" />
     <Compile Include="Days\2019\Day24.fs" />
     <Compile Include="Days\2019\Day25.fs" />
-    
+    <Compile Include="Days\2020\Shared\BootCodeInterpreter.fs" />
+    <Content Include="Days\2020\Input\01.txt" />
+    <Content Include="Days\2020\Input\02.txt" />
+    <Content Include="Days\2020\Input\03.txt" />
+    <Content Include="Days\2020\Input\04.txt" />
+    <Content Include="Days\2020\Input\05.txt" />
+    <Content Include="Days\2020\Input\06.txt" />
+    <Content Include="Days\2020\Input\07.txt" />
+    <Content Include="Days\2020\Input\08.txt" />
+    <Content Include="Days\2020\Input\09.txt" />
     <Compile Include="Days\2020\Day01.fs" />
     <Compile Include="Days\2020\Day02.fs" />
     <Compile Include="Days\2020\Day03.fs" />
@@ -265,6 +278,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Flips" Version="2.4.2" />
     <PackageReference Include="FSharp.Collections.ParallelSeq" Version="1.1.4" />
     <PackageReference Include="FSharp.HashCollections" Version="0.1.1" />
     <PackageReference Include="FSharpx.Collections" Version="2.1.3" />
@@ -273,7 +287,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Days\2020\Input\" />
+    <Folder Include="Days\2015\Shared\" />
   </ItemGroup>
 
 </Project>

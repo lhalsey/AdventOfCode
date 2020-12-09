@@ -2,7 +2,7 @@ namespace AdventOfCode.Days.Y2019
 
 open System
 open AdventOfCode.Shared.Utility
-open AdventOfCode.Shared.IntCodeInterpreter
+open AdventOfCode.Days.Y2019.Shared.IntCodeInterpreter
 
 /// Day 25: Cryostasis
 /// https://adventofcode.com/2019/day/25
@@ -97,9 +97,9 @@ module Day25 =
         | Playback ->
             { GetInput = fun gs ->
                 match gs.Input with
-                | h::t -> (Console.WriteLine $">> {h}"); (h, { gs with Input = t })
+                | h::t -> h, { gs with Input = t }
                 | _ -> failwith "No more input"
-              HandleOutput = fun (gs, o) -> Console.WriteLine o; gs 
+              HandleOutput = fun (gs, _) -> gs 
               InitialState = { gameState with Input = getSolution() } }
         | AI -> // TODO: Finish logic
             { GetInput = fun gs -> (Console.ReadLine() + "\n", gs)

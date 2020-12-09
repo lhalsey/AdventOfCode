@@ -2,7 +2,7 @@ namespace AdventOfCode.Days.Y2019
 
 open System
 open AdventOfCode.Shared.Utility
-open AdventOfCode.Shared.IntCodeInterpreter
+open AdventOfCode.Days.Y2019.Shared.IntCodeInterpreter
 open FSharp.Collections.ParallelSeq
 
 /// Day 19: Tractor Beam

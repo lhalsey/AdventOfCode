@@ -2,7 +2,7 @@
 
 open AdventOfCode.Shared.Utility
 open AdventOfCode.Shared
-open AdventOfCode.Shared.IntCodeInterpreter
+open AdventOfCode.Days.Y2019.Shared.IntCodeInterpreter
 
 /// Day 15: Oxygen System
 /// https://adventofcode.com/2019/day/15

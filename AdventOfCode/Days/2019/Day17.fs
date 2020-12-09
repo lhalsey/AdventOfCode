@@ -4,7 +4,7 @@ open System
 
 open AdventOfCode.Shared
 open AdventOfCode.Shared.Utility
-open AdventOfCode.Shared.IntCodeInterpreter
+open AdventOfCode.Days.Y2019.Shared.IntCodeInterpreter
 
 /// Day 17: Set and Forget
 /// https://adventofcode.com/2019/day/17
@@ -96,6 +96,7 @@ module Day17 =
                 }
 
         getDirectionsR bot ('?', 1)
+
 
     // Derive three functions (A, B & C) which represent a series of movements (e.g. 10,L,8,R,6)
     // with 20 char max per function. It must be possible to form a main function from these movement

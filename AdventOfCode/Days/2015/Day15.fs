@@ -15,8 +15,8 @@ module Day15 =
 
     let parseInput() = getFile (2015, 15) |> readLinesAs parse |> DenseMatrix.ofRowSeq
 
-    // The total score of a cookie can be found by adding up each of the properties
-    // (negative totals become 0) and then multiplying together everything except calories.
+     // The total score of a cookie can be found by adding up each of the properties
+     // (negative totals become 0) and then multiplying together everything except calories.
     let getScoreAndCalories (ingredients: Matrix<_>) (amounts: Vector<_>) =
         let scores = (amounts * ingredients).PointwiseMaximum(0.0) |> Seq.toList
 
@@ -48,6 +48,7 @@ module Day15 =
         |> PSeq.filter (fun (_, calories) -> caloriesFilter calories)
         |> PSeq.map (fun (score, _) -> score)
         |> PSeq.max
+
 
     // Given the ingredients in your kitchen and their properties, what is the total score
     // of the highest-scoring cookie you can make?
