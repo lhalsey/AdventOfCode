@@ -9,12 +9,12 @@ open FSharp.Collections.ParallelSeq
 // customs declaration forms are distributed to the passengers.
 module Day06 =
 
-    let parseInput() = getFile (2020, 6) |> readAllText |> splitOn "\n\n" 
+    let parseInput() = getFile (2020, 6) |> readAllText |> splitOn "\r\n\r\n" 
 
     // This is ~3x slower than using distinct/countBy but is elegant and consistent for both parts
     let getYesAnswers combine group =
         group
-        |> split '\n'
+        |> splitOn "\r\n"
         |> Array.map set
         |> combine
         |> Set.count

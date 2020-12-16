@@ -34,7 +34,7 @@ module Day04 =
 
     // E.g. "iyr:1928 cid:150 pid:476113241 eyr:2039 hcl:a5ac0f ecl:#25f8d2 byr:2027 hgt:190"
     let parse =
-        splitAny " \n"
+        splitAny " \r\n"
         >> Array.map (splitIntoPair ":")
         >> Array.map (fun (k, v) -> getFieldType k, v)
         >> readOnlyDict
@@ -42,7 +42,7 @@ module Day04 =
     let parseInput() =
         getFile (2020, 4)
         |> readAllText
-        |> fun s -> s.Split "\n\n"
+        |> fun s -> s.Split "\r\n\r\n"
         |> Array.map parse
 
     let (|IsOneOf|_|) choices x = if choices |> Set.contains x then Some IsOneOf else None
