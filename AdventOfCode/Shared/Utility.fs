@@ -94,6 +94,12 @@ module Utility =
         let cache = HashSet<'a>()
         x |> Seq.find (cache.Add >> not)
 
+    let findIndexes pred (elems: 'a seq) =
+        elems
+        |> Seq.indexed
+        |> Seq.filter (fun (_, i) -> pred i)
+        |> Seq.map fst
+
     let toReadOnlyHashSet (elems: 'a seq) = HashSet<'a>(elems) :> IReadOnlySet<'a>
 
     // Data structure

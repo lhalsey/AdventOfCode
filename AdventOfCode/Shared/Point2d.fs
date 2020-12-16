@@ -6,6 +6,8 @@ type Point2d = { X: int; Y: int } with
 
     static member (+) (a, b) = { X = a.X + b.X; Y = a.Y + b.Y }
 
+    static member (-) (a, b) = { X = a.X - b.X; Y = a.Y - b.Y }
+
     static member (+) (a, b: Direction2d) = { X = a.X + b.X; Y = a.Y + b.Y }
 
     static member (*) (a, b) = { X = a.X * b; Y = a.Y * b }
@@ -44,3 +46,5 @@ type Point2d = { X: int; Y: int } with
         }
 
     member __.GetAllAdjacent() = seq { yield! __.GetAdjacent(); yield! __.GetDiagonalAdjacent() }
+
+    member __.GetPointsInDirection (dir: Direction2d) = __ |> Seq.unfold (fun x -> Some(x, x + dir))

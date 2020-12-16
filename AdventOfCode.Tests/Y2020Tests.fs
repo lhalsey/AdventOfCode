@@ -63,46 +63,46 @@ module ``Y2020 Tests`` =
     let ``Day 09 Part 2`` () = Day09.Part2() |> should equal 9_372_7241L
     
     [<Fact>]
-    let ``Day 10 Part 1`` () = Day10.Part1() |> should equal Unknown
+    let ``Day 10 Part 1`` () = Day10.Part1() |> should equal 2_664
                 
     [<Fact>]
-    let ``Day 10 Part 2`` () = Day10.Part2() |> should equal Unknown
+    let ``Day 10 Part 2`` () = Day10.Part2() |> should equal 148_098_383_347_712L
     
     [<Fact>]
-    let ``Day 11 Part 1`` () = Day11.Part1() |> should equal Unknown
+    let ``Day 11 Part 1`` () = Day11.Part1() |> should equal 2_324
                 
     [<Fact>]
-    let ``Day 11 Part 2`` () = Day11.Part2() |> should equal Unknown
+    let ``Day 11 Part 2`` () = Day11.Part2() |> should equal 2_068
     
     [<Fact>]
-    let ``Day 12 Part 1`` () = Day12.Part1() |> should equal Unknown
+    let ``Day 12 Part 1`` () = Day12.Part1() |> should equal 1_148
                 
     [<Fact>]
-    let ``Day 12 Part 2`` () = Day12.Part2() |> should equal Unknown
+    let ``Day 12 Part 2`` () = Day12.Part2() |> should equal 52_203
     
     [<Fact>]
-    let ``Day 13 Part 1`` () = Day13.Part1() |> should equal Unknown
+    let ``Day 13 Part 1`` () = Day13.Part1() |> should equal 2_305L
                 
     [<Fact>]
-    let ``Day 13 Part 2`` () = Day13.Part2() |> should equal Unknown
+    let ``Day 13 Part 2`` () = Day13.Part2() |> should equal 552_612_234_243_498L
     
     [<Fact>]
-    let ``Day 14 Part 1`` () = Day14.Part1() |> should equal Unknown
+    let ``Day 14 Part 1`` () = Day14.Part1() |> should equal 17_028_179_706_934L
                 
     [<Fact>]
-    let ``Day 14 Part 2`` () = Day14.Part2() |> should equal Unknown
+    let ``Day 14 Part 2`` () = Day14.Part2() |> should equal 3_683_236_147_222L
     
     [<Fact>]
-    let ``Day 15 Part 1`` () = Day15.Part1() |> should equal Unknown
+    let ``Day 15 Part 1`` () = Day15.Part1() |> should equal 421
                 
     [<Fact>]
-    let ``Day 15 Part 2`` () = Day15.Part2() |> should equal Unknown
+    let ``Day 15 Part 2`` () = Day15.Part2() |> should equal 436
     
     [<Fact>]
-    let ``Day 16 Part 1`` () = Day16.Part1() |> should equal Unknown
+    let ``Day 16 Part 1`` () = Day16.Part1() |> should equal 25_972
                 
     [<Fact>]
-    let ``Day 16 Part 2`` () = Day16.Part2() |> should equal Unknown
+    let ``Day 16 Part 2`` () = Day16.Part2() |> should equal 622_670_335_901L
     
     [<Fact>]
     let ``Day 17 Part 1`` () = Day17.Part1() |> should equal Unknown

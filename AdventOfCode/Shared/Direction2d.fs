@@ -10,6 +10,16 @@ type Direction2d = { X: int; Y: int } with
     static member SouthWest = { X = -1; Y = 1 }
     static member SouthEast = { X = 1; Y = 1 }
 
+    static member AllDirections = 
+        seq { Direction2d.North
+              Direction2d.NorthEast
+              Direction2d.East
+              Direction2d.SouthEast
+              Direction2d.South
+              Direction2d.SouthWest
+              Direction2d.West
+              Direction2d.NorthWest }
+
     static member GetDirection dir =
         match dir with
         | 'N' | 'U' -> Direction2d.North
@@ -19,6 +29,8 @@ type Direction2d = { X: int; Y: int } with
         | _   -> failwithf "Unexpected token %c" dir
 
     static member (+) (a, b) = { X = a.X + b.X; Y = a.Y + b.Y }
+
+    static member (*) (a, b) = { X = a.X * b; Y = a.Y * b }
 
     static member GoStraight dir = { X = dir.X; Y = dir.Y }
 
