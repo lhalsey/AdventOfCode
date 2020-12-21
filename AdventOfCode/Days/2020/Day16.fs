@@ -2,8 +2,6 @@ namespace AdventOfCode.Days.Y2020
 
 open AdventOfCode.Shared.Utility
 open System.Collections.Generic
-open FSharp.Collections.ParallelSeq
-
 
 /// Day 16: Ticket Translation
 /// https://adventofcode.com/2020/day/16

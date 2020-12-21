@@ -255,6 +255,11 @@
     <Content Include="Days\2020\Input\13.txt" />
     <Content Include="Days\2020\Input\14.txt" />
     <Content Include="Days\2020\Input\16.txt" />
+    <Content Include="Days\2020\Input\17.txt" />
+    <Content Include="Days\2020\Input\18.txt" />
+    <Content Include="Days\2020\Input\19.txt" />
+    <Content Include="Days\2020\Input\20.txt" />
+    <Content Include="Days\2020\Input\21.txt" />
     <Compile Include="Days\2020\Day01.fs" />
     <Compile Include="Days\2020\Day02.fs" />
     <Compile Include="Days\2020\Day03.fs" />

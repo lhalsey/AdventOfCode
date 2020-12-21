@@ -55,7 +55,11 @@ module Utility =
         let tokens = s.Split(delimiter)
         f tokens.[0], f tokens.[1]
 
+    let replace (source: string) (dest: string) (s: string) = s.Replace (source, dest)
+
     let tryParseAsInt (s: string) = match Int32.TryParse s with (true, v) -> Some v | _ -> None
+
+    let tryParseAsInt64 (s: string) = match Int64.TryParse s with (true, v) -> Some v | _ -> None
 
     let tryParseAsFloat (s: string) = match Double.TryParse s with (true, v) -> Some v | _ -> None
 
@@ -89,6 +93,10 @@ module Utility =
     let partialSort n (x: 'a seq) = x.PartialSort(n)
 
     let takeEvery n (x: 'a seq) = x.TakeEvery n
+
+    let countBetween min max (x: 'a seq) = x.CountBetween (min, max)
+
+    let hasExactly n (x: 'a seq) = x.Exactly n
 
     let findDuplicate (x: 'a seq) =
         let cache = HashSet<'a>()
@@ -200,6 +208,8 @@ module Utility =
 
     // Active patterns
     let (|Int|_|) = tryParseAsInt
+
+    let (|Int64|_|) = tryParseAsInt64
 
     let (|Regex|_|) pattern input =
         let m = Regex.Match(input, pattern)
