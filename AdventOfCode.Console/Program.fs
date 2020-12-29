@@ -4,6 +4,6 @@ open System
 
 [<EntryPoint>]
 let main argv =
-    let result = AdventOfCode.Days.Y2019.Day25.Part1()
+    let result = AdventOfCode.Days.Y2020.Day23.Part2()
     0
 

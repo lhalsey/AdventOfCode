@@ -8,6 +8,10 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Tailcalls>true</Tailcalls>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Include="Shared\HashMapOkasaki.fs" />
     <Compile Include="Shared\Direction2d.fs" />
@@ -260,6 +264,8 @@
     <Content Include="Days\2020\Input\19.txt" />
     <Content Include="Days\2020\Input\20.txt" />
     <Content Include="Days\2020\Input\21.txt" />
+    <Content Include="Days\2020\Input\22.txt" />
+    <Content Include="Days\2020\Input\24.txt" />
     <Compile Include="Days\2020\Day01.fs" />
     <Compile Include="Days\2020\Day02.fs" />
     <Compile Include="Days\2020\Day03.fs" />

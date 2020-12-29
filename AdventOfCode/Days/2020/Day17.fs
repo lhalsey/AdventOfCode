@@ -6,7 +6,7 @@ open System.Collections.Generic
 /// Day 17: Conway Cubes
 /// https://adventofcode.com/2020/day/17
 /// As your flight slowly drifts through the sky, the Elves at the Mythical Information Burea
-// at the North Pole contact you.
+/// at the North Pole contact you.
 module Day17 =
 
     let [<Literal>] Inactive = 0

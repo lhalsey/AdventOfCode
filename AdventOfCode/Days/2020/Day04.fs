@@ -42,7 +42,7 @@ module Day04 =
     let parseInput() =
         getFile (2020, 4)
         |> readAllText
-        |> fun s -> s.Split "\r\n\r\n"
+        |> fun s -> s.Split "\n\n"
         |> Array.map parse
 
     let (|IsOneOf|_|) choices x = if choices |> Set.contains x then Some IsOneOf else None

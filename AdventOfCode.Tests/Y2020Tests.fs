@@ -135,25 +135,25 @@ module ``Y2020 Tests`` =
     let ``Day 21 Part 2`` () = Day21.Part2() |> should equal "bqkndvb,zmb,bmrmhm,snhrpv,vflms,bqtvr,qzkjrtl,rkkrx"
     
     [<Fact>]
-    let ``Day 22 Part 1`` () = Day22.Part1() |> should equal Unknown
+    let ``Day 22 Part 1`` () = Day22.Part1() |> should equal 31_957
                 
     [<Fact>]
-    let ``Day 22 Part 2`` () = Day22.Part2() |> should equal Unknown
+    let ``Day 22 Part 2`` () = Day22.Part2() |> should equal 33_212
     
     [<Fact>]
-    let ``Day 23 Part 1`` () = Day23.Part1() |> should equal Unknown
+    let ``Day 23 Part 1`` () = Day23.Part1() |> should equal 68_245_739
                 
     [<Fact>]
-    let ``Day 23 Part 2`` () = Day23.Part2() |> should equal Unknown
+    let ``Day 23 Part 2`` () = Day23.Part2() |> should equal 219_634_632_000L
     
     [<Fact>]
-    let ``Day 24 Part 1`` () = Day24.Part1() |> should equal Unknown
+    let ``Day 24 Part 1`` () = Day24.Part1() |> should equal 455
                 
     [<Fact>]
-    let ``Day 24 Part 2`` () = Day24.Part2() |> should equal Unknown
+    let ``Day 24 Part 2`` () = Day24.Part2() |> should equal 3_904
     
     [<Fact>]
-    let ``Day 25 Part 1`` () = Day25.Part1() |> should equal Unknown
+    let ``Day 25 Part 1`` () = Day25.Part1() |> should equal 3_286_137L
                 
     [<Fact>]
-    let ``Day 25 Part 2`` () = Day25.Part2() |> should equal Unknown
+    let ``Day 25 Part 2`` () = Day25.Part2() |> should equal 1
