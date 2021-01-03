@@ -30,7 +30,7 @@ module Day03 =
         
         slopes
         |> PSeq.map (countTrees input >> int64)
-        |> PSeq.reduce (Checked.(*))
+        |> PSeq.reduce (*)
 
     // Starting at the top-left corner of your map and following a slope of right 3 and down 1,
     // how many trees would you encounter?

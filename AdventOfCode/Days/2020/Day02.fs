@@ -4,8 +4,8 @@ open AdventOfCode.Shared.Utility
 
 /// Day 2: Password Philosophy
 /// https://adventofcode.com/2020/day/2
-/// Your flight departs in a few days from the coastal airport; the easiest way down
-/// to the coast from here is via toboggan.
+/// Your flight departs in a few days from the coastal airport; the easiest way down to the coast
+/// from here is via toboggan.
 module Day02 =
 
     type Policy = { Min: int; Max: int; Letter: char }

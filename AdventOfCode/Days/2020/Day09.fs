@@ -37,7 +37,7 @@ module Day09 =
     // from step 1. To find the encryption weakness, add together the smallest and largest number in this
     // contiguous range.
     let Part2() =
-        let target = 756_008_079L
+        let target = 756_008_079L // From part 1
         let input = parseInput()
 
         let result = findContiguousSum target input

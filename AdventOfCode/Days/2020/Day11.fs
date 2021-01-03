@@ -16,37 +16,67 @@ module Day11 =
 
     let parse = function '.' -> Floor | 'L' -> Empty | '#' -> Occupied | x -> failwithf "Invalid: %c" x
 
-    let parseInput() = getFile (2020, 11) |> parseGrid parse |> readOnlyDict
+    let parseInput() = getFile (2020, 11) |> parseGrid parse |> Seq.toList
 
-    let getOccupiedAdjacent (seatMap: SeatMap) (point: Point2d) = 
-        point.GetAllAdjacent()
-        |> Seq.filter (fun x -> seatMap |> tryFind x = Some Occupied)
+    let getNeighboursAdjacent (seats: IReadOnlySet<Point2d>) (point: Point2d) = 
+        let neighbours =
+            point.GetAllAdjacent()
+            |> Seq.filter seats.Contains
+            |> Seq.toList
 
-    let getOccupiedInSight (seatMap: SeatMap) (point: Point2d) =
-        let isOccupied (cell: Point2d) (dir: Direction2d) = 
-            cell.GetPointsInDirection dir
-            |> Seq.pick (fun x ->
-                match seatMap |> tryFind x with Some Occupied -> Some true | Some Floor -> None | _ -> Some false)
+        point, neighbours
 
-        Direction2d.AllDirections
-        |> Seq.filter (fun dir -> isOccupied (point + dir) dir)
+    // TODO: Fix magic numbers
+    let getNeighboursInSight (seats: IReadOnlySet<Point2d>) (point: Point2d) =
+        let firstSeat (dir: Direction2d) = 
+            point.GetPointsInDirection dir
+            |> Seq.skip 1
+            |> Seq.takeWhile (fun x -> x.X >= 0 && x.X < 100 && x.Y >= 0 && x.Y < 100)
+            |> Seq.tryFind seats.Contains
+
+        let neighbours =
+            Direction2d.AllDirections
+            |> Seq.choose firstSeat
+            |> Seq.toList
+
+        point, neighbours
        
-    let getOccupiedSeats getOccupied occupiedSeatThreshold =
+    let getOccupiedSeats getNeighbours occupiedSeatThreshold =
+        let input = parseInput()
 
-        let getNext (seatMap: SeatMap) =
-            let nextCell (point: Point2d) = function
-                | Floor -> Floor
-                | Empty -> if getOccupied seatMap point |> Seq.isEmpty then Occupied else Empty
-                | Occupied -> if getOccupied seatMap point |> hasAtLeast occupiedSeatThreshold then Empty else Occupied
+        let seats =
+            input
+            |> List.filter (fun (_, c) -> c = Occupied || c = Empty)
+            |> List.map fst
+            |> toReadOnlyHashSet
 
-            seatMap
-            |> PSeq.map (fun x -> x.Key, (nextCell x.Key x.Value))
+        let neighbourMap =
+            seats
+            |> PSeq.map (getNeighbours seats)
             |> readOnlyDict
 
-        // Keep updating seat map until it becomes stable
-        parseInput()
+        let getNext (occupied: IReadOnlySet<Point2d>) =
+            let isOccupied (point: Point2d) =
+                let occupiedNeighbours = neighbourMap.[point] |> Seq.filter occupied.Contains
+
+                match occupied.Contains point with
+                | false -> occupiedNeighbours |> hasAtMost 0
+                | true -> occupiedNeighbours |> hasAtMost occupiedSeatThreshold
+
+            seats
+            |> PSeq.filter isOccupied
+            |> toReadOnlyHashSet
+
+        let occupied =
+            input
+            |> List.filter (fun (_, c) -> c = Occupied)
+            |> Seq.map fst
+            |> toReadOnlyHashSet
+
+        // Keep updating set of occupied seats until it becomes stable
+        occupied
         |> Seq.unfold (fun x -> Some(x, getNext x))
-        |> Seq.map (fun x -> x.Values |> countIf ((=) Occupied))
+        |> Seq.map (fun x -> x.Count)
         |> Seq.pairwise
         |> Seq.find (fun (x, y) -> x = y)
         |> fst
@@ -54,8 +84,8 @@ module Day11 =
 
     // Simulate your seating area by applying the seating rules repeatedly until no seats change state.
     // How many seats end up occupied?
-    let Part1() = getOccupiedSeats getOccupiedAdjacent 4
+    let Part1() = getOccupiedSeats getNeighboursAdjacent 3
         
     // Given the new visibility method and the rule change for occupied seats becoming empty,
     // once equilibrium is reached, how many seats end up occupied?
-    let Part2() = getOccupiedSeats getOccupiedInSight 5
+    let Part2() = getOccupiedSeats getNeighboursInSight 4

@@ -7,7 +7,7 @@ open AdventOfCode.Shared.Utility
 /// You board your plane only to discover a new problem: you dropped your boarding pass!
 module Day05 =
 
-    let parseInput() = getFile (2020, 5) |> readLines //As (Seq.map parse)
+    let parseInput() = getFile (2020, 5) |> readLines
 
     // Observe that the binary partitioning to narrow the range in row or column is simply
     // equivalent to parsing the zones as binary digits
@@ -15,7 +15,6 @@ module Day05 =
         let getBit = function 'B' | 'R' -> 1 | _ -> 0
 
         zones |> Seq.fold (fun acc x -> acc * 2 + getBit x) 0
-
 
     // As a sanity check, look through your list of boarding passes. What is the highest seat ID
     // on a boarding pass?
@@ -28,5 +27,5 @@ module Day05 =
         |> Seq.map getSeatId
         |> Seq.sort      // Sort and find non-consecutive pair of seat ids
         |> Seq.pairwise  // Could use Gauss to calculate expected sums and take the difference
-        |> Seq.find (fun (x, y) -> x <> y - 1) // But it's mot significantly quicker
+        |> Seq.find (fun (x, y) -> x <> y - 1) // But it's not significantly quicker
         |> fun (x, _) -> x + 1

@@ -7,17 +7,23 @@ module Day25 =
 
     let CardPublicKey = 14_222_596L
     let DoorPublicKey = 4_057_428L
+    let Divisor = 20_201_227L
+    let Multiplier = 7L
 
-    let getSequence subject = 1L |> Seq.unfold (fun x -> Some(x, (x * subject) % 20_201_227L))
+    // When value matches first public key then we will have iterated
+    // loopsize times and key will hold the value of the encryption key
+    let getEncryptionKey pk1 pk2 =
+        let rec getEncryptionKeyR value key =
+            match value with
+            | v when v = pk1 -> key
+            | _ -> let value = (value * Multiplier) % Divisor
+                   let key = (key * pk2) % Divisor
+                   getEncryptionKeyR value key
 
-    let getLoopSize target = getSequence 7L |> Seq.findIndex ((=) target)
+        getEncryptionKeyR 1L 1L
 
-    let getEncryptionKey subject loopSize = getSequence subject |> Seq.item loopSize
 
     // What encryption key is the handshake trying to establish?
-    let Part1() =
-        CardPublicKey
-        |> getLoopSize
-        |> getEncryptionKey DoorPublicKey
+    let Part1() = getEncryptionKey CardPublicKey DoorPublicKey
 
     let Part2() = 1 // Check on your deposit

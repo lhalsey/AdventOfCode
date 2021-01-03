@@ -82,6 +82,8 @@ module Utility =
 
     let hasAtLeast n (x: 'a seq) = x.AtLeast n
 
+    let hasAtMost n (x: 'a seq) = x.AtMost n
+
     let countIf f = Seq.filter f >> Seq.length
 
     let parallelCountIf f = PSeq.filter f >> PSeq.length

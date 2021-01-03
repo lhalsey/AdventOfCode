@@ -5,7 +5,8 @@ open AdventOfCode.Shared.Utility
 
 /// Day 24: Lobby Layout
 /// https://adventofcode.com/2020/day/24
-/// Your raft makes it to the tropical island; it turns out that the small crab was an excellent navigator.
+/// Your raft makes it to the tropical island; it turns out that the small crab was
+/// an excellent navigator.
 module Day24 =
 
     // TOOD: Use trapezoidal coordinates, e.g. make NW = N and SE = South

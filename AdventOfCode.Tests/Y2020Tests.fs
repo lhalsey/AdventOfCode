@@ -39,10 +39,10 @@ module ``Y2020 Tests`` =
     let ``Day 05 Part 2`` () = Day05.Part2() |> should equal 717
     
     [<Fact>]
-    let ``Day 06 Part 1`` () = Day06.Part1() |> should equal 6170
+    let ``Day 06 Part 1`` () = Day06.Part1() |> should equal 6_170
         
     [<Fact>]
-    let ``Day 06 Part 2`` () = Day06.Part2() |> should equal 2947
+    let ``Day 06 Part 2`` () = Day06.Part2() |> should equal 2_947
     
     [<Fact>]
     let ``Day 07 Part 1`` () = Day07.Part1() |> should equal 139

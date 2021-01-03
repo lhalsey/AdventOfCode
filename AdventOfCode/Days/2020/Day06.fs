@@ -14,7 +14,7 @@ module Day06 =
     // This is ~3x slower than using distinct/countBy but is elegant and consistent for both parts
     let getYesAnswers combine group =
         group
-        |> splitOn "\n"
+        |> split '\n'
         |> Array.map set
         |> combine
         |> Set.count

@@ -295,7 +295,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Flips" Version="2.4.2" />
     <PackageReference Include="FSharp.Collections.ParallelSeq" Version="1.1.4" />
     <PackageReference Include="FSharp.HashCollections" Version="0.1.1" />
     <PackageReference Include="FSharpx.Collections" Version="2.1.3" />
