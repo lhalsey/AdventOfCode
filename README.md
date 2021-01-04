@@ -1,3 +1,5 @@
+![](AOCLogo.png)
+
 # Advent Of Code
 
 My solutions in F# for [Advent of Code](https://adventofcode.com/2020/events).
