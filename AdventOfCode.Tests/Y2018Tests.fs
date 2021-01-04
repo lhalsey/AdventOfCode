@@ -104,11 +104,11 @@ module ``Y2018 Tests`` =
     //[<Fact>]
     //let ``Day 16 Part 2`` () = Day16.Part2() |> should equal Unknown
     
-    [<Fact>]
-    let ``Day 17 Part 1`` () = Day17.Part1() |> should equal Unknown
+    //[<Fact>]
+    //let ``Day 17 Part 1`` () = Day17.Part1() |> should equal Unknown
                 
-    [<Fact>]
-    let ``Day 17 Part 2`` () = Day17.Part2() |> should equal Unknown
+    //[<Fact>]
+    //let ``Day 17 Part 2`` () = Day17.Part2() |> should equal Unknown
     
     //[<Fact>]
     //let ``Day 18 Part 1`` () = Day18.Part1() |> should equal Unknown
