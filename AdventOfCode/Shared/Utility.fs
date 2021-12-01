@@ -6,6 +6,7 @@ open System.Text.RegularExpressions
 open System.Collections.Generic
 open MoreLinq.Extensions
 open FSharp.Collections.ParallelSeq
+open Priority_Queue
 
 module Utility =
 
@@ -207,6 +208,41 @@ module Utility =
                     queue.Enqueue child
                     visited.Add child |> ignore
             }
+
+    // https://en.wikipedia.org/wiki/A*_search_algorithm
+    // Search graph prioritising best nodes based on current cost + estimated cost to target
+    let aStar
+        (start: 'a) 
+        (goal: 'a)
+        (getChildren: 'a -> ('a * int) seq)
+        (getEstimate: 'a -> int) =
+            let queue = SimplePriorityQueue<'a, int>()
+            let costMap = Dictionary<'a, int>()
+    
+            costMap.Add(start, 0)
+            queue.Enqueue(start, getEstimate start)
+
+            seq {
+                while (queue.Count > 0) do
+                    let state = queue.Dequeue()
+        
+                    if state = goal then yield costMap.[state]
+
+                    let currCost = costMap.[state]
+
+                    for node, moveCost in getChildren state do
+                        let cost = currCost + moveCost
+                        let priority = cost + getEstimate node
+
+                        match costMap.TryGetValue node with
+                        | true, v when cost < v -> // Found a better way to reach this node
+                            costMap.[node] <- cost
+                            queue.UpdatePriority(node, priority)
+                        | false, _ -> // First time visiting this node
+                            costMap.Add(node, cost)
+                            queue.Enqueue(node, priority)
+                        | _ -> ()
+                 }
 
     // Active patterns
     let (|Int|_|) = tryParseAsInt

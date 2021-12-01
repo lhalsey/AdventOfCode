@@ -5,7 +5,7 @@ open AdventOfCode.Shared.Utility
 /// Day 1: Not Quite Lisp
 /// https://adventofcode.com/2015/day/1
 /// Santa was hoping for a white Christmas, but his weather machine's snow function is powered
-// by stars, and he's fresh out!
+/// by stars, and he's fresh out!
 module Day01 =
 
     // An opening parenthesis, (, means he should go up one floor, and a closing parenthesis, ),

@@ -6,7 +6,7 @@ open FSharp.Collections.ParallelSeq
 /// Day 6: Custom Custom
 /// https://adventofcode.com/2020/day/6
 /// As your flight approaches the regional airport where you'll switch to a much larger plane,
-// customs declaration forms are distributed to the passengers.
+/// customs declaration forms are distributed to the passengers.
 module Day06 =
 
     let parseInput() = getFile (2020, 6) |> readAllText |> splitOn "\n\n" 

@@ -74,11 +74,11 @@ module ``Y2018 Tests`` =
     //[<Fact>]
     //let ``Day 11 Part 2`` () = Day11.Part2() |> should equal Unknown
     
-    //[<Fact>]
-    //let ``Day 12 Part 1`` () = Day12.Part1() |> should equal Unknown
+    [<Fact>]
+    let ``Day 12 Part 1`` () = Day12.Part1() |> should equal 2_444
                 
-    //[<Fact>]
-    //let ``Day 12 Part 2`` () = Day12.Part2() |> should equal Unknown
+    [<Fact>]
+    let ``Day 12 Part 2`` () = Day12.Part2() |> should equal 750_000_000_697L
     
     //[<Fact>]
     //let ``Day 13 Part 1`` () = Day13.Part1() |> should equal Unknown
@@ -92,11 +92,11 @@ module ``Y2018 Tests`` =
     //[<Fact>]
     //let ``Day 14 Part 2`` () = Day14.Part2() |> should equal Unknown
     
-    //[<Fact>]
-    //let ``Day 15 Part 1`` () = Day15.Part1() |> should equal Unknown
+    [<Fact>]
+    let ``Day 15 Part 1`` () = Day15.Part1() |> should equal Unknown
                 
-    //[<Fact>]
-    //let ``Day 15 Part 2`` () = Day15.Part2() |> should equal Unknown
+    [<Fact>]
+    let ``Day 15 Part 2`` () = Day15.Part2() |> should equal Unknown
     
     //[<Fact>]
     //let ``Day 16 Part 1`` () = Day16.Part1() |> should equal Unknown
@@ -104,11 +104,11 @@ module ``Y2018 Tests`` =
     //[<Fact>]
     //let ``Day 16 Part 2`` () = Day16.Part2() |> should equal Unknown
     
-    //[<Fact>]
-    //let ``Day 17 Part 1`` () = Day17.Part1() |> should equal Unknown
+    [<Fact>]
+    let ``Day 17 Part 1`` () = Day17.Part1() |> should equal Unknown
                 
-    //[<Fact>]
-    //let ``Day 17 Part 2`` () = Day17.Part2() |> should equal Unknown
+    [<Fact>]
+    let ``Day 17 Part 2`` () = Day17.Part2() |> should equal Unknown
     
     //[<Fact>]
     //let ``Day 18 Part 1`` () = Day18.Part1() |> should equal Unknown
@@ -122,11 +122,11 @@ module ``Y2018 Tests`` =
     //[<Fact>]
     //let ``Day 19 Part 2`` () = Day19.Part2() |> should equal Unknown
     
-    //[<Fact>]
-    //let ``Day 20 Part 1`` () = Day20.Part1() |> should equal Unknown
+    [<Fact>]
+    let ``Day 20 Part 1`` () = Day20.Part1() |> should equal 4_018
                 
-    //[<Fact>]
-    //let ``Day 20 Part 2`` () = Day20.Part2() |> should equal Unknown
+    [<Fact>]
+    let ``Day 20 Part 2`` () = Day20.Part2() |> should equal 8_581
     
     //[<Fact>]
     //let ``Day 21 Part 1`` () = Day21.Part1() |> should equal Unknown
@@ -134,17 +134,17 @@ module ``Y2018 Tests`` =
     //[<Fact>]
     //let ``Day 21 Part 2`` () = Day21.Part2() |> should equal Unknown
     
-    //[<Fact>]
-    //let ``Day 22 Part 1`` () = Day22.Part1() |> should equal Unknown
+    [<Fact>]
+    let ``Day 22 Part 1`` () = Day22.Part1() |> should equal 8_735
                 
-    //[<Fact>]
-    //let ``Day 22 Part 2`` () = Day22.Part2() |> should equal Unknown
+    [<Fact>]
+    let ``Day 22 Part 2`` () = Day22.Part2() |> should equal 984
     
-    //[<Fact>]
-    //let ``Day 23 Part 1`` () = Day23.Part1() |> should equal Unknown
+    [<Fact>]
+    let ``Day 23 Part 1`` () = Day23.Part1() |> should equal 172
                 
-    //[<Fact>]
-    //let ``Day 23 Part 2`` () = Day23.Part2() |> should equal Unknown
+    [<Fact>]
+    let ``Day 23 Part 2`` () = Day23.Part2() |> should equal Unknown
     
     //[<Fact>]
     //let ``Day 24 Part 1`` () = Day24.Part1() |> should equal Unknown

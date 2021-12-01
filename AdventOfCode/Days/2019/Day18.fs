@@ -23,7 +23,7 @@ module Day18 =
 
     type Part = Part1 | Part2
 
-    [<CustomEquality; NoComparison>] // Just want to use location for equality
+    [<CustomEquality; NoComparison>] // Just want to use location for equality in BFS
     type State = { Location: Point2d; Distance: int; Doors: KeyType } with
         override __.GetHashCode() = hash __.Location
         override __.Equals(other) = 
