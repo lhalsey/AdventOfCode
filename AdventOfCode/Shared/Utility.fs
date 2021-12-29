@@ -41,7 +41,7 @@ module Utility =
         |> Array.toList
 
     // String
-    let split (delimiter: char) (s: string) = s.Split [| delimiter |]
+    let split (delimiter: char) (s: string) = s.Split([| delimiter |], StringSplitOptions.RemoveEmptyEntries)
 
     let splitOn (delimiter: string) (s: string) = s.Split delimiter
 
@@ -111,7 +111,11 @@ module Utility =
         |> Seq.filter (fun (_, i) -> pred i)
         |> Seq.map fst
 
+    let toHashSet (elems: 'a seq) = HashSet<'a>(elems)
+
     let toReadOnlyHashSet (elems: 'a seq) = HashSet<'a>(elems) :> IReadOnlySet<'a>
+
+    let median (elems: double seq) = MathNet.Numerics.Statistics.Statistics.Median(elems)
 
     // Data structure
     let mapIntersect a b = seq {
@@ -165,6 +169,8 @@ module Utility =
                    v
 
     // Graph
+    let bfs (getChildren: Func<'a, IEnumerable<'a>>) root = MoreLinq.MoreEnumerable.TraverseBreadthFirst(root, getChildren)
+
     let breadthFirstSearch getChildren (nodes: 'a list) =
         let visited = HashSet<'a>(nodes)
 
@@ -253,6 +259,8 @@ module Utility =
         let m = Regex.Match(input, pattern)
         if m.Success then Some(List.tail [ for g in m.Groups -> g.Value ])
         else None
+
+    let (|LowerCase|_|) (s: string) = if s |> Seq.forall Char.IsLower then Some s else None
 
     // Custom Operators
     let inline (>=<) lowest highest value = value >= lowest && value <= highest
