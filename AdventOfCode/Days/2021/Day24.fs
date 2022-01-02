@@ -103,17 +103,16 @@ module Day24 =
 
     let Part1() =
         
+        //let selection = new EliteSelection()
+        //let crossover = new OnePointCrossover()
+        //let mutation = new MyMutation()
+        //let fitness = new MyFitness()
+        //let chromosome = new MyChromosome()
+        //let pop = new Population(500, 500, chromosome)
+        //let ga = new GeneticAlgorithm(pop, fitness, selection, crossover, mutation)
+        //ga.Termination <- new FitnessThresholdTermination(-10.0)
 
-        let selection = new EliteSelection()
-        let crossover = new OnePointCrossover()
-        let mutation = new MyMutation()
-        let fitness = new MyFitness()
-        let chromosome = new MyChromosome()
-        let pop = new Population(500, 500, chromosome)
-        let ga = new GeneticAlgorithm(pop, fitness, selection, crossover, mutation)
-        ga.Termination <- new FitnessThresholdTermination(-10.0)
-
-        ga.Start()
+        //ga.Start()
 
         0
 

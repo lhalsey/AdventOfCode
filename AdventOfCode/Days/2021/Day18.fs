@@ -98,32 +98,17 @@ module Day18 =
     // To split a regular number, replace it with a pair; the left element of the pair should be
     // the regular number divided by two and rounded down, while the right element of the pair should be
     // the regular number divided by two and rounded up.
-    //let split (num: SnailNumber) =
-    //    let rec splitR (num: SnailNumber) (hasSplit: bool) =
-    //        match hasSplit, num with // Only one split per traversal
-    //        | false, Regular r when r >= SplitThreshold -> true, Pair (Regular (r / 2), Regular ((r + 1) / 2))
-    //        | _, Regular r -> hasSplit, Regular r
-    //        | _, Pair (l, r) ->
-    //            let (hasSplit, left) = splitR l hasSplit
-    //            let (hasSplit, right) = splitR r hasSplit
-    //            hasSplit, Pair (left, right)
+    let split (num: SnailNumber) =
+        let rec splitR (num: SnailNumber) (hasSplit: bool) =
+            match hasSplit, num with // Only one split per traversal
+            | false, Regular r when r >= SplitThreshold -> true, Pair (Regular (r / 2), Regular ((r + 1) / 2))
+            | _, Regular r -> hasSplit, Regular r
+            | _, Pair (l, r) ->
+                let (hasSplit, left) = splitR l hasSplit
+                let (hasSplit, right) = splitR r hasSplit
+                hasSplit, Pair (left, right)
 
-    //    splitR num false
-
-    let split (num: SnailNumber) =       
-        let getReplacementMap (i, r) = 
-            let pair = Pair (Regular (r / 2), Regular ((r + 1) / 2))
-
-            [i, pair] |> readOnlyDict
-        
-        let replacement =
-            traverse num
-            |> Seq.tryPick (function { Current = Regular r; Index = i } when r >= SplitThreshold -> Some (i, r)  | _ -> None)
-            |> Option.map getReplacementMap
-
-        match replacement with
-        | None -> false, num
-        | Some r -> true, replaceNodes num r
+        splitR num false
 
     // During reduction, at most one action applies, after which the process returns to the top
     // of the list of actions. For example, if split produces a pair that meets the explode criteria,
