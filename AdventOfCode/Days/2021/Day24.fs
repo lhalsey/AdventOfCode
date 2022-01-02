@@ -1,6 +1,15 @@
 namespace AdventOfCode.Days.Y2021
 
 open AdventOfCode.Shared.Utility
+open GeneticSharp.Domain
+open GeneticSharp.Domain.Populations
+open GeneticSharp.Domain.Chromosomes
+open GeneticSharp.Domain.Fitnesses
+open GeneticSharp.Domain.Selections
+open GeneticSharp.Domain.Crossovers
+open GeneticSharp.Domain.Mutations
+open GeneticSharp.Domain.Terminations
+open GeneticSharp.Domain.Randomizations
 
 /// Day 24: Arithmetic Logic Unit
 /// https://adventofcode.com/2021/day/24
@@ -29,6 +38,8 @@ module Day24 =
 
     let parseInput() = getFile (2021, 24) |> readLinesAs parse |> Seq.toList
 
+    let instructions = parseInput()
+
     let execute (instructions: Instruction list) (input: int64 list) =
         let rec executeR (instructions: Instruction list) (input: int64 list) (variables: Map<string, int64>) =
 
@@ -49,22 +60,60 @@ module Day24 =
                 | _ -> failwithf "Invalid instruction: %A" instruction
             
             match instructions, input with
-            | [], _ -> variables
+            | [], _ -> variables.["z"]
             | (Input r)::xs, y::ys -> executeR xs ys (variables.Add (r, y))
             | (Input _)::_, [] -> failwith "Insufficient input"
             | x::xs, _ -> executeR xs input (executeInstruction x)
 
-
         executeR instructions input Map.empty
 
+
+
+    type MyChromosome =
+        inherit ChromosomeBase
+        val s: unit
+        new () = { inherit ChromosomeBase(14); s = base.CreateGenes() }
+
+        override __.CreateNew() = new MyChromosome()
+        override __.GenerateGene (geneIndex: int) =
+            let v = RandomizationProvider.Current.GetInt(1, 9) |> int64
+            new Gene(v)
+
+    type MyFitness() =
+        interface IFitness with
+            member __.Evaluate (chromosome: IChromosome) =
+                let input =
+                    chromosome.GetGenes()
+                    |> Array.map (fun x -> x.Value :?> int64)
+                    |> Array.toList
+                
+                execute instructions input |> float |> (*) -1.0
+
+    type MyMutation() =
+        inherit MutationBase()
+
+        override __.PerformMutate (chromosome: IChromosome, probability: float32) =
+            if (RandomizationProvider.Current.GetDouble() <= 0.1)
+            then 
+                let index = RandomizationProvider.Current.GetInt(0, chromosome.Length)
+                let currVal = chromosome.GetGene(index).Value :?> int64
+                let mut = RandomizationProvider.Current.GetInt(-3, 3)
+                let newVal = currVal + int64 mut |> min 9L |> max 1L
+                chromosome.ReplaceGene(index, new Gene(int64 newVal))
+
     let Part1() =
-        let instructions = parseInput()
-        let input = List.replicate 14 0L
+        
 
-        //let getNext (digits: int64 list) =
-            
+        let selection = new EliteSelection()
+        let crossover = new OnePointCrossover()
+        let mutation = new MyMutation()
+        let fitness = new MyFitness()
+        let chromosome = new MyChromosome()
+        let pop = new Population(500, 500, chromosome)
+        let ga = new GeneticAlgorithm(pop, fitness, selection, crossover, mutation)
+        ga.Termination <- new FitnessThresholdTermination(-10.0)
 
-        let result = execute instructions input
+        ga.Start()
 
         0
 

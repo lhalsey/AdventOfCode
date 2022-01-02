@@ -347,7 +347,7 @@ module Program =
         //[<Benchmark>] member __.Y2021_17_1() = Y2021.Day17.Part1() 
         //[<Benchmark>] member __.Y2021_17_2() = Y2021.Day17.Part2() 
         //[<Benchmark>] member __.Y2021_18_1() = Y2021.Day18.Part1() 
-        //[<Benchmark>] member __.Y2021_18_2() = Y2021.Day18.Part2() 
+        [<Benchmark>] member __.Y2021_18_2() = Y2021.Day18.Part2() 
         //[<Benchmark>] member __.Y2021_19_1() = Y2021.Day19.Part1() 
         //[<Benchmark>] member __.Y2021_19_2() = Y2021.Day19.Part2() 
         //[<Benchmark>] member __.Y2021_20_1() = Y2021.Day20.Part1() 
@@ -360,7 +360,7 @@ module Program =
         //[<Benchmark>] member __.Y2021_23_2() = Y2021.Day23.Part2() 
         //[<Benchmark>] member __.Y2021_24_1() = Y2021.Day24.Part1() 
         //[<Benchmark>] member __.Y2021_24_2() = Y2021.Day24.Part2() 
-        [<Benchmark>] member __.Y2021_25_1() = Y2021.Day25.Part1() 
+        //[<Benchmark>] member __.Y2021_25_1() = Y2021.Day25.Part1() 
         //[<Benchmark>] member __.Y2021_25_2() = Y2021.Day25.Part2() 
 
     let [<EntryPoint>] main _ =

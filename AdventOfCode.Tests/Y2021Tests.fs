@@ -120,16 +120,16 @@ module ``Y2021 Tests`` =
     let ``Day 17 Part 2`` () = Day17.Part2() |> should equal 940
     
     [<Fact>]
-    let ``Day 18 Part 1`` () = Day18.Part1() |> should equal Unknown
+    let ``Day 18 Part 1`` () = Day18.Part1() |> should equal 4_641
                 
     [<Fact>]
-    let ``Day 18 Part 2`` () = Day18.Part2() |> should equal Unknown
+    let ``Day 18 Part 2`` () = Day18.Part2() |> should equal 4_624
     
     [<Fact>]
-    let ``Day 19 Part 1`` () = Day19.Part1() |> should equal Unknown
+    let ``Day 19 Part 1`` () = Day19.Part1() |> should equal 318
                 
     [<Fact>]
-    let ``Day 19 Part 2`` () = Day19.Part2() |> should equal Unknown
+    let ``Day 19 Part 2`` () = Day19.Part2() |> should equal 12_166
     
     [<Fact>]
     let ``Day 20 Part 1`` () = Day20.Part1() |> should equal 5_339

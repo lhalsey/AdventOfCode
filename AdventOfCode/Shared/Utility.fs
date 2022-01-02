@@ -151,11 +151,22 @@ module Utility =
                       yield! uniquePairs t
             | _ -> () }
 
+    let countDistinct elems =
+        let hs = new HashSet<_>()
+
+        elems |> countIf hs.Add
+
     // Dictionary
     let tryFind (item: 'a) (dict: IReadOnlyDictionary<'a,_>) =
         match dict.TryGetValue item with
         | true, v -> Some v
         | _ -> None
+
+    let dictIntersect a (b: IReadOnlyDictionary<'a, 'b>) = seq {
+        for KeyValue(k, va) in a do
+            match tryFind k b with
+            | Some vb -> yield (va, vb)
+            | None    -> () }
 
     // Function
     let memoise f =
@@ -254,6 +265,8 @@ module Utility =
     let (|Int|_|) = tryParseAsInt
 
     let (|Int64|_|) = tryParseAsInt64
+
+    let (|CInt|_|) c = match Char.GetNumericValue c with -1.0 -> None | x -> Some (int x)
 
     let (|Regex|_|) pattern input =
         let m = Regex.Match(input, pattern)
