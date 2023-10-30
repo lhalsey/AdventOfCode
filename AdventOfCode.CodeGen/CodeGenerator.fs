@@ -44,7 +44,7 @@ let getDay (year, day) =
 // Use to generate Days.csv
 let GetDays() =
     let days =
-        ([2015 .. 2020], [1 .. 25])
+        ([2023 .. 2023], [1 .. 25])
         ||> List.allPairs 
         |> List.map getDay
 
@@ -80,5 +80,5 @@ let genClass (x: DaysType.Row) =
 let Generate() =
 
     DaysType.Load("Days.csv").Rows
-    |> Seq.filter (fun x -> x.Year = 2022)
+    |> Seq.filter (fun x -> x.Year = 2023)
     |> Seq.iter genClass

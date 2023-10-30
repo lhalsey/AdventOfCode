@@ -9,14 +9,15 @@
 
 
   <ItemGroup>
-    <Compile Include="Y2015Tests.fs" />
-    <Compile Include="Y2016Tests.fs" />
-    <Compile Include="Y2017Tests.fs" />
-    <Compile Include="Y2018Tests.fs" />
-    <Compile Include="Y2019Tests.fs" />
-    <Compile Include="Y2020Tests.fs" />
-    <Compile Include="Y2021Tests.fs" />
+    <Compile Include="Y2015 Tests.fs" />
+    <Compile Include="Y2016 Tests.fs" />
+    <Compile Include="Y2017 Tests.fs" />
+    <Compile Include="Y2018 Tests.fs" />
+    <Compile Include="Y2019 Tests.fs" />
+    <Compile Include="Y2020 Tests.fs" />
+    <Compile Include="Y2021 Tests.fs" />
     <Compile Include="Y2022 Tests.fs" />
+    <Compile Include="Y2023 Tests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
