@@ -2,6 +2,7 @@ namespace AdventOfCode.Days.Y2019
 
 open System
 open AdventOfCode.Shared.Utility
+open AdventOfCode.Shared.Constants
 open AdventOfCode.Days.Y2019.Shared.IntCodeInterpreter
 
 /// Day 25: Cryostasis
@@ -118,4 +119,5 @@ module Day25 =
     // Look around the ship and see if you can find the password for the main airlock.
     let Part1() = run()
 
-    let Part2() = 1L // Align Warp Drive!
+    // Align Warp Drive!
+    let Part2() = GotAllTheStars

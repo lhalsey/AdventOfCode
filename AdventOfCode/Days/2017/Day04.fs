@@ -1,5 +1,6 @@
 namespace AdventOfCode.Days.Y2017
 
+open System
 open AdventOfCode.Shared.Utility
 
 /// Day 4: High-Entropy Passphrases
@@ -9,8 +10,12 @@ module Day04 =
 
     let parseInput() = getFile (2017, 4) |> readLines
 
-    let Part1() =
-        0
+    let sortWord (s: string) = s |> Seq.sort |> Seq.toArray |> String
 
-    let Part2() =
-        0
+    let isValidBy (f: string -> string) (s: string)  = s |> split ' ' |> areAllDistinctBy f
+
+    // The system's full passphrase list is available as your puzzle input. How many passphrases are valid?
+    let Part1() = parseInput() |> countIf (isValidBy id)
+
+    // Under this new system policy, how many passphrases are valid?
+    let Part2() = parseInput() |> countIf (isValidBy sortWord)

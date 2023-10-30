@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode.Days.Y2021
 
 open AdventOfCode.Shared
+open AdventOfCode.Shared.Constants
 open AdventOfCode.Shared.Utility
 open System.Collections.Generic
 
@@ -51,5 +52,5 @@ module Day25 =
         |> Seq.findIndex areEquivalent
         |> (+) 1
 
-
-    let Part2() = 1
+    // Start the sleigh!
+    let Part2() = GotAllTheStars

@@ -1,12 +1,11 @@
 ﻿namespace AdventOfCode.Tests.Y2020
 
 open AdventOfCode.Days.Y2020
+open AdventOfCode.Shared.Constants
 open Xunit
 open FsUnit.Xunit
 
 module ``Y2020 Tests`` =
-
-    let [<Literal>] Unknown = -99
 
     [<Fact>]
     let ``Day 01 Part 1`` () = Day01.Part1() |> should equal 270_144
@@ -156,4 +155,4 @@ module ``Y2020 Tests`` =
     let ``Day 25 Part 1`` () = Day25.Part1() |> should equal 3_286_137L
                 
     [<Fact>]
-    let ``Day 25 Part 2`` () = Day25.Part2() |> should equal 1
+    let ``Day 25 Part 2`` () = Day25.Part2() |> should equal GotAllTheStars

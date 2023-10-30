@@ -1,6 +1,7 @@
 namespace AdventOfCode.Days.Y2016
 
 open AdventOfCode.Shared.Utility
+open AdventOfCode.Shared.Constants
 
 /// Day 25: Clock Signal
 /// https://adventofcode.com/2016/day/25

@@ -83,7 +83,7 @@ module Day22 =
         let distanceToTarget (state: State) = state.Location.ManhattanDistanceTo Target
         // let dijkstra (state: State) = 0
 
-        aStar start goal getChildren distanceToTarget
+        aStar start ((=) goal) getChildren distanceToTarget
         |> Seq.head
 
 

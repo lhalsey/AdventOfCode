@@ -1,6 +1,7 @@
 namespace AdventOfCode.Days.Y2020
 
 open AdventOfCode.Shared.Utility
+open System
 open System.Collections.Generic
 
 /// Day 22: Crab Combat
@@ -13,10 +14,10 @@ module Day22 =
     type Winner = Player1 | Player2
 
     let parsePlayer (s: string) =
-        s |> split '\n' |> Array.tail |> Array.map int |> Array.toList
+        s |> splitOn Environment.NewLine |> Array.tail |> Array.map int |> Array.toList
 
     let parseInput() =
-        let players = getFile (2020, 22) |> readAllText |> splitOn "\n\n" 
+        let players = getFile (2020, 22) |> readAllText |> splitOn $"{Environment.NewLine}{Environment.NewLine}"
         parsePlayer players.[0], parsePlayer players.[1]
 
     let playGame mode = 

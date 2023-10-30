@@ -1,5 +1,7 @@
 namespace AdventOfCode.Days.Y2015
 
+open AdventOfCode.Shared.Constants
+
 /// Day 25: Let It Snow
 /// https://adventofcode.com/2015/day/25
 /// Merry Christmas!
@@ -32,4 +34,4 @@ module Day25 =
     let Part1() = getCode (2_981, 3_075)
 
     // Start weather machine!
-    let Part2() = 1
+    let Part2() = GotAllTheStars

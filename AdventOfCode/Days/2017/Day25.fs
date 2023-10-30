@@ -1,6 +1,7 @@
 namespace AdventOfCode.Days.Y2017
 
 open AdventOfCode.Shared.Utility
+open AdventOfCode.Shared.Constants
 
 /// Day 25: The Halting Problem
 /// https://adventofcode.com/2017/day/25

@@ -37,7 +37,7 @@ module Day20 =
 
     // E.g. "Tile 2311:\n..##.#..#., etc."
     let parseTile (s: string) = 
-        let lines = s |> split '\n'
+        let lines = s |> splitOn Environment.NewLine
         let id = lines.[0] |> split ' ' |> fun x -> x.[1].Trim(':') |> int64
         let tiles = lines.[1..] |> Array.map (Seq.toList) |> Array.toList
 
@@ -46,7 +46,7 @@ module Day20 =
     let parseInput() =
         getFile (2020, 20)
         |> readAllText
-        |> splitOn "\n\n"
+        |> splitOn $"{Environment.NewLine}{Environment.NewLine}"
         |> Array.map parseTile
         |> Array.toList
 

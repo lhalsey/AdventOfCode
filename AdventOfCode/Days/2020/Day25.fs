@@ -1,5 +1,7 @@
 namespace AdventOfCode.Days.Y2020
 
+open AdventOfCode.Shared.Constants
+
 /// Day 25: Combo Breaker
 /// https://adventofcode.com/2020/day/25
 /// You finally reach the check-in desk.
@@ -26,4 +28,5 @@ module Day25 =
     // What encryption key is the handshake trying to establish?
     let Part1() = getEncryptionKey CardPublicKey DoorPublicKey
 
-    let Part2() = 1 // Check on your deposit
+    // Check on your deposit!
+    let Part2() = GotAllTheStars

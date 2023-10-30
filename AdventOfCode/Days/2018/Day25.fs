@@ -1,6 +1,7 @@
 namespace AdventOfCode.Days.Y2018
 
 open AdventOfCode.Shared.Utility
+open AdventOfCode.Shared.Constants
 
 /// Day 25: Four-Dimensional Adventure
 /// https://adventofcode.com/2018/day/25

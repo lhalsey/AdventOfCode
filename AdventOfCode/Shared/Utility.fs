@@ -56,11 +56,15 @@ module Utility =
         let tokens = s.Split(delimiter)
         f tokens.[0], f tokens.[1]
 
+    let splitBy (token: 'a) (elems: 'a seq) = elems.Split(token)
+
     let replace (source: string) (dest: string) (s: string) = s.Replace (source, dest)
 
     let tryParseAsInt (s: string) = match Int32.TryParse s with (true, v) -> Some v | _ -> None
 
     let tryParseAsInt64 (s: string) = match Int64.TryParse s with (true, v) -> Some v | _ -> None
+
+    let tryParseAsBigInt (s: string) = match bigint.TryParse s with (true, v) -> Some v | _ -> None
 
     let tryParseAsFloat (s: string) = match Double.TryParse s with (true, v) -> Some v | _ -> None
 
@@ -69,6 +73,8 @@ module Utility =
     let contains (sub: string) (s: string) = s.Contains (sub, StringComparison.CurrentCultureIgnoreCase)
 
     let charsToStr (c: char seq) = c |> Seq.toArray |> String
+
+    let reverse (s: string) = s |> Seq.rev |> Seq.toArray  |> String
 
     let parseGrid (parse: char -> 'a) (s: string) =
         s
@@ -95,15 +101,23 @@ module Utility =
 
     let partialSort n (x: 'a seq) = x.PartialSort(n)
 
+    let partialSortDesc n (x: 'a seq) = x.PartialSort(n, MoreLinq.OrderByDirection.Descending)
+
     let takeEvery n (x: 'a seq) = x.TakeEvery n
+
+    let takeUntil (f: 'a -> bool) (x: 'a seq) = x.TakeUntil f
 
     let countBetween min max (x: 'a seq) = x.CountBetween (min, max)
 
     let hasExactly n (x: 'a seq) = x.Exactly n
 
-    let findDuplicate (x: 'a seq) =
+    let findDuplicate (elems: 'a seq) =
         let cache = HashSet<'a>()
-        x |> Seq.find (cache.Add >> not)
+        elems |> Seq.find (cache.Add >> not)
+
+    let findDuplicateBy f (elems: 'a seq) =
+        let cache = HashSet<'b>()
+        elems |> Seq.find (fun x -> cache.Add (f x) |> not)
 
     let findIndexes pred (elems: 'a seq) =
         elems
@@ -117,12 +131,22 @@ module Utility =
 
     let median (elems: double seq) = MathNet.Numerics.Statistics.Statistics.Median(elems)
 
+    let remainder a b = (a % b + b) % b
+
     // Data structure
     let mapIntersect a b = seq {
         for KeyValue(k, va) in a do
             match Map.tryFind k b with
             | Some vb -> yield (va, vb)
             | None    -> () }
+
+    let mapCombine (source: Map<'a, 'b>) (target: Map<'a, 'b>) f = 
+        let combine (acc: Map<'a, 'b>) (x: KeyValuePair<'a, 'b>) =
+            match Map.tryFind x.Key acc with
+            | Some v -> acc.Add(x.Key, (f x.Value v))
+            | None    -> acc.Add(x.Key, x.Value)
+
+        (source, target) ||> Seq.fold combine
 
     // List
     // From: http://stackoverflow.com/questions/286427/calculating-permutations-in-f
@@ -155,6 +179,24 @@ module Utility =
         let hs = new HashSet<_>()
 
         elems |> countIf hs.Add
+
+    let countUntilDuplicate elems =
+        let hs = new HashSet<_>()
+
+        elems |> Seq.takeWhile hs.Add |> Seq.length
+
+    let countUntilDuplicateBy f elems =
+        let hs = new HashSet<_>()
+
+        elems |> Seq.takeWhile (fun x -> hs.Add (f x)) |> Seq.length
+
+    let areAllDistinct elems =
+        let hs = new HashSet<_>()
+        elems |> Seq.forall hs.Add
+
+    let areAllDistinctBy f elems =
+        let hs = new HashSet<_>()
+        elems |> Seq.forall (fun x -> hs.Add (f x))
 
     // Dictionary
     let tryFind (item: 'a) (dict: IReadOnlyDictionary<'a,_>) =
@@ -230,7 +272,7 @@ module Utility =
     // Search graph prioritising best nodes based on current cost + estimated cost to target
     let aStar
         (start: 'a) 
-        (goal: 'a)
+        (isGoal: 'a -> bool)
         (getChildren: 'a -> ('a * int) seq)
         (getEstimate: 'a -> int) =
             let queue = SimplePriorityQueue<'a, int>()
@@ -243,7 +285,7 @@ module Utility =
                 while (queue.Count > 0) do
                     let state = queue.Dequeue()
         
-                    if state = goal then yield costMap.[state]
+                    if isGoal state then yield costMap.[state]
 
                     let currCost = costMap.[state]
 
@@ -266,7 +308,11 @@ module Utility =
 
     let (|Int64|_|) = tryParseAsInt64
 
+    let (|BigInt|_|) = tryParseAsBigInt
+
     let (|CInt|_|) c = match Char.GetNumericValue c with -1.0 -> None | x -> Some (int x)
+
+    let (|CInt64|_|) c = match Char.GetNumericValue c with -1.0 -> None | x -> Some (int64 x)
 
     let (|Regex|_|) pattern input =
         let m = Regex.Match(input, pattern)

@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode.Shared
 
 open System
+open MoreLinq
 
 type Point2d = { X: int; Y: int } with
 
@@ -13,6 +14,8 @@ type Point2d = { X: int; Y: int } with
     static member (*) (a, b) = { X = a.X * b; Y = a.Y * b }
 
     static member Origin = { X = 0; Y = 0 }
+
+    member __.Unit = { X = compare __.X 0; Y = compare __.Y 0 }
 
     member __.ManhattanDistance = abs __.X + abs __.Y
 
@@ -48,3 +51,10 @@ type Point2d = { X: int; Y: int } with
     member __.GetAllAdjacent() = seq { yield! __.GetAdjacent(); yield! __.GetDiagonalAdjacent() }
 
     member __.GetPointsInDirection (dir: Direction2d) = __ |> Seq.unfold (fun x -> Some(x, x + dir))
+
+    member __.GetPointsBetween (point: Point2d) =
+        let offset = (point - __).Unit
+
+        let takeUntil (f: 'a -> bool) (x: 'a seq) = x.TakeUntil f
+
+        __ |> Seq.unfold (fun x -> Some(x, x + offset)) |> takeUntil (fun x -> x = point)

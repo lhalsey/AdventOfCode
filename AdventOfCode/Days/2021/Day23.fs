@@ -154,7 +154,7 @@ module Day23 =
         let start = { Hallway = Map.empty; Rooms = rooms }
         let target = { Hallway = Map.empty; Rooms = targetRooms }
         
-        aStar start target (getChildren roomSize) (getEstimate roomSize)
+        aStar start ((=) target) (getChildren roomSize) (getEstimate roomSize)
         |> Seq.head
        
     // What is the least energy required to organize the amphipods?

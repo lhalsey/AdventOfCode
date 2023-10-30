@@ -1,6 +1,7 @@
 namespace AdventOfCode.Days.Y2020
 
 open AdventOfCode.Shared.Utility
+open System
 open System.Collections.Generic
 
 /// Day 4: Passport Processing
@@ -42,7 +43,7 @@ module Day04 =
     let parseInput() =
         getFile (2020, 4)
         |> readAllText
-        |> fun s -> s.Split "\n\n"
+        |> splitOn $"{Environment.NewLine}{Environment.NewLine}"
         |> Array.map parse
 
     let (|IsOneOf|_|) choices x = if choices |> Set.contains x then Some IsOneOf else None

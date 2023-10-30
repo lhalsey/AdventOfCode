@@ -1,12 +1,11 @@
 ﻿namespace AdventOfCode.Tests.Y2021
 
 open AdventOfCode.Days.Y2021
+open AdventOfCode.Shared.Constants
 open Xunit
 open FsUnit.Xunit
 
 module ``Y2021 Tests`` =
-
-    let [<Literal>] Unknown = -99
 
     [<Fact>]
     let ``Day 01 Part 1`` () = Day01.Part1() |> should equal 1752
@@ -144,10 +143,10 @@ module ``Y2021 Tests`` =
     let ``Day 21 Part 2`` () = Day21.Part2() |> should equal 49_982_165_861_983L
     
     [<Fact>]
-    let ``Day 22 Part 1`` () = Day22.Part1() |> should equal 602_574
+    let ``Day 22 Part 1`` () = Day22.Part1() |> should equal 602_574L
                 
     [<Fact>]
-    let ``Day 22 Part 2`` () = Day22.Part2() |> should equal Unknown
+    let ``Day 22 Part 2`` () = Day22.Part2() |> should equal 1_288_707_160_324_706L
     
     [<Fact>]
     let ``Day 23 Part 1`` () = Day23.Part1() |> should equal 16_244
@@ -156,13 +155,13 @@ module ``Y2021 Tests`` =
     let ``Day 23 Part 2`` () = Day23.Part2() |> should equal 43_226
     
     [<Fact>]
-    let ``Day 24 Part 1`` () = Day24.Part1() |> should equal Unknown
+    let ``Day 24 Part 1`` () = Day24.Part1() |> should equal 41_299_994_879_959L
                 
     [<Fact>]
-    let ``Day 24 Part 2`` () = Day24.Part2() |> should equal Unknown
+    let ``Day 24 Part 2`` () = Day24.Part2() |> should equal 11_189_561_113_216L
     
     [<Fact>]
     let ``Day 25 Part 1`` () = Day25.Part1() |> should equal 295
                 
     [<Fact>]
-    let ``Day 25 Part 2`` () = Day25.Part2() |> should equal 1
+    let ``Day 25 Part 2`` () = Day25.Part2() |> should equal GotAllTheStars

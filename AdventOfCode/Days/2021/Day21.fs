@@ -9,6 +9,7 @@ module Day21 =
 
     let [<Literal>] BoardSpaces = 10
     let [<Literal>] DiceRollsPerTurn = 3
+    let [<Literal>] DeterministicDiceSides = 100
     let [<Literal>] DiracDiceSides = 3
 
     type Player = { Space: int; Score: int }
@@ -18,7 +19,7 @@ module Day21 =
 
     let roll diceRolls count =
         (diceRolls, 0)
-        |> Seq.unfold (fun (d, sum) -> Some ((d, sum), (d + 1, sum + (d % 100 + 1))))
+        |> Seq.unfold (fun (d, sum) -> Some ((d, sum), (d + 1, sum + (d % DeterministicDiceSides + 1))))
         |> Seq.item count
 
     let play p1Space p2Space target =
