@@ -7,41 +7,41 @@ open FsUnit.Xunit
 
 module ``Y2018 Tests`` =
 
-    //[<Fact>]
-    //let ``Day 01 Part 1`` () = Day01.Part1() |> should equal UnknownResult
+    [<Fact>]
+    let ``Day 01 Part 1`` () = Day01.Part1() |> should equal 486
 
-    //[<Fact>]
-    //let ``Day 01 Part 2`` () = Day01.Part2() |> should equal UnknownResult
+    [<Fact>]
+    let ``Day 01 Part 2`` () = Day01.Part2() |> should equal 69_285
 
-    //[<Fact>]
-    //let ``Day 02 Part 1`` () = Day02.Part1() |> should equal UnknownResult
+    [<Fact>]
+    let ``Day 02 Part 1`` () = Day02.Part1() |> should equal 4_693
 
-    //[<Fact>]
-    //let ``Day 02 Part 2`` () = Day02.Part2() |> should equal UnknownResult
+    [<Fact>]
+    let ``Day 02 Part 2`` () = Day02.Part2() |> should equal "pebjqsalrdnckzfihvtxysomg"
 
-    //[<Fact>]
-    //let ``Day 03 Part 1`` () = Day03.Part1() |> should equal UnknownResult
+    [<Fact>]
+    let ``Day 03 Part 1`` () = Day03.Part1() |> should equal 110_195
         
-    //[<Fact>]
-    //let ``Day 03 Part 2`` () = Day03.Part2() |> should equal UnknownResult
+    [<Fact>]
+    let ``Day 03 Part 2`` () = Day03.Part2() |> should equal 894
     
-    //[<Fact>]
-    //let ``Day 04 Part 1`` () = Day04.Part1() |> should equal UnknownResult
+    [<Fact>]
+    let ``Day 04 Part 1`` () = Day04.Part1() |> should equal 142_515
         
-    //[<Fact>]
-    //let ``Day 04 Part 2`` () = Day04.Part2() |> should equal UnknownResult
+    [<Fact>]
+    let ``Day 04 Part 2`` () = Day04.Part2() |> should equal 5_370
     
-    //[<Fact>]
-    //let ``Day 05 Part 1`` () = Day05.Part1() |> should equal UnknownResult
+    [<Fact>]
+    let ``Day 05 Part 1`` () = Day05.Part1() |> should equal 9_704
         
-    //[<Fact>]
-    //let ``Day 05 Part 2`` () = Day05.Part2() |> should equal UnknownResult
+    [<Fact>]
+    let ``Day 05 Part 2`` () = Day05.Part2() |> should equal 6_942
     
-    //[<Fact>]
-    //let ``Day 06 Part 1`` () = Day06.Part1() |> should equal UnknownResult
+    [<Fact>]
+    let ``Day 06 Part 1`` () = Day06.Part1() |> should equal 4_186
         
-    //[<Fact>]
-    //let ``Day 06 Part 2`` () = Day06.Part2() |> should equal UnknownResult
+    [<Fact>]
+    let ``Day 06 Part 2`` () = Day06.Part2() |> should equal 45_509
     
     //[<Fact>]
     //let ``Day 07 Part 1`` () = Day07.Part1() |> should equal UnknownResult

@@ -68,6 +68,8 @@ module Utility =
 
     let tryParseAsFloat (s: string) = match Double.TryParse s with (true, v) -> Some v | _ -> None
 
+    let tryParseAsDateTime (s: string) = match DateTime.TryParse s with (true, v) -> Some v | _ -> None
+
     let trim (s: string) = s.Trim()
 
     let contains (sub: string) (s: string) = s.Contains (sub, StringComparison.CurrentCultureIgnoreCase)
@@ -115,6 +117,10 @@ module Utility =
         let cache = HashSet<'a>()
         elems |> Seq.find (cache.Add >> not)
 
+    let tryFindDuplicate (elems: 'a seq) =
+        let cache = HashSet<'a>()
+        elems |> Seq.tryFind (cache.Add >> not)
+
     let findDuplicateBy f (elems: 'a seq) =
         let cache = HashSet<'b>()
         elems |> Seq.find (fun x -> cache.Add (f x) |> not)
@@ -124,6 +130,8 @@ module Utility =
         |> Seq.indexed
         |> Seq.filter (fun (_, i) -> pred i)
         |> Seq.map fst
+
+    let rec repeatInfinite (elems: 'a seq) = seq { yield! elems; yield! repeatInfinite elems }
 
     let toHashSet (elems: 'a seq) = HashSet<'a>(elems)
 
@@ -309,6 +317,8 @@ module Utility =
     let (|Int64|_|) = tryParseAsInt64
 
     let (|BigInt|_|) = tryParseAsBigInt
+
+    let (|Date|_|) = tryParseAsDateTime
 
     let (|CInt|_|) c = match Char.GetNumericValue c with -1.0 -> None | x -> Some (int x)
 
