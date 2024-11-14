@@ -72,10 +72,10 @@ module Day17 =
                 let straight = { bot with Location = bot.Location + bot.Direction }
 
                 let turnLeft = Direction2d.TurnLeft bot.Direction
-                let left = { bot with Location = bot.Location + turnLeft; Direction = turnLeft }
+                let left = { Location = bot.Location + turnLeft; Direction = turnLeft }
 
                 let turnRight = Direction2d.TurnRight bot.Direction
-                let right = { bot with Location = bot.Location + turnRight; Direction = turnRight }
+                let right = { Location = bot.Location + turnRight; Direction = turnRight }
 
                 // Go straight if we can and increase distance count
                 if scaffold.Contains straight.Location then

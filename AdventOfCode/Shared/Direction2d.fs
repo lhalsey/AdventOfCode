@@ -3,7 +3,7 @@
 type Direction2d = { X: int; Y: int } with
     static member North = { X = 0; Y = -1 }
     static member South = { X = 0; Y = 1 }
-    static member  East = { X = 1; Y = 0 }
+    static member East = { X = 1; Y = 0 }
     static member West = { X = -1; Y = 0 }
     static member NorthWest = { X = -1; Y = -1 }
     static member NorthEast = { X = 1; Y = -1 }

@@ -50,7 +50,7 @@ module Day23 =
         | (x, y)::t ->
             let state = f x |> provideInput y // Provide X and Y input
             let packetMap = systemState.PacketMap.Add(id, t) // Remove X and Y from map
-            (state, { systemState with PacketMap = packetMap; IdleTime = 0 })
+            (state, { PacketMap = packetMap; IdleTime = 0 })
 
     // Run one computer at a time, sending or receiving values via the packet map
     let rec runAll (computers: Computer list) (systemState: SystemState) =

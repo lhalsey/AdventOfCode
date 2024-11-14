@@ -55,8 +55,7 @@ module Day17 =
                     let placed = state.Placed |> Set.union newPoints
                     let topOfNew = newPoints |> Set.map (fun x -> x.Y) |> Set.maxElement
                     let top = max state.Top topOfNew
-                    { state with Placed = placed; RockIndex = state.RockIndex + 1;
-                                 JetIndex = state.JetIndex + 1; Top = top }
+                    { Placed = placed; RockIndex = state.RockIndex + 1; JetIndex = state.JetIndex + 1; Top = top }
                 | false ->
                     dropRockR ({ state with JetIndex = state.JetIndex + 1 }) posAfterFall
 

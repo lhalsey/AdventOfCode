@@ -132,7 +132,7 @@ module Day24 =
 
             let currentLevel = levels.[CurrentLevel]
 
-            { currentLevel with Cells = currentLevel.Cells |> Array.mapi getEvolvedCell }
+            { Cells = currentLevel.Cells |> Array.mapi getEvolvedCell }
 
         let evolveGeneration (generation: Generation) = 
 
@@ -143,7 +143,7 @@ module Day24 =
                 |> PSeq.map evolveLevel // Parallelizing gives ~100% speed up
                 |> PSeq.toArray
 
-            { generation with Levels = levels }
+            { Levels = levels }
 
         state
         |> Seq.unfold (fun gen -> Some(gen, evolveGeneration gen))

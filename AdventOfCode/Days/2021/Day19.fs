@@ -52,7 +52,7 @@ module Day19 =
             | x -> failwithf "Invalid input %A" x
 
         let getTransform (fs: (Point3d -> int) list) =
-            fun (p: Point3d) -> { p with X = fs.[0] p; Y = fs.[1] p; Z = fs.[2] p }
+            fun (p: Point3d) -> { X = fs.[0] p; Y = fs.[1] p; Z = fs.[2] p }
 
         combos
         |> List.map (fun (a, d) -> a |> List.map (fun x -> getPerm x d) |> getTransform)

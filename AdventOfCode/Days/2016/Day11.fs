@@ -87,7 +87,7 @@ module Day11 =
         let map = state.FloorMap.Add(state.MyFloor, currItems).Add(floor, newItems)
 
         if isValidCombo currItems && isValidCombo newItems
-        then Some { state with MyFloor = floor; FloorMap = map; Steps = state.Steps + 1 }
+        then Some { MyFloor = floor; FloorMap = map; Steps = state.Steps + 1 }
         else None
 
     // The lift's capacity rating means it can carry at most yourself and two RTGs or

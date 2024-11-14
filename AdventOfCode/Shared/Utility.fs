@@ -2,6 +2,7 @@
 
 open System
 open System.IO
+open System.Linq
 open System.Text.RegularExpressions
 open System.Collections.Generic
 open MoreLinq.Extensions
@@ -205,6 +206,9 @@ module Utility =
     let areAllDistinctBy f elems =
         let hs = new HashSet<_>()
         elems |> Seq.forall (fun x -> hs.Add (f x))
+
+    let groupBy (keySelector: 'a -> 'b) (resultSelector: 'b -> 'a seq -> 'c) (elems: 'a seq) =
+        elems.GroupBy(keySelector, resultSelector)
 
     // Dictionary
     let tryFind (item: 'a) (dict: IReadOnlyDictionary<'a,_>) =
