@@ -7,6 +7,7 @@ open BenchmarkDotNet.Jobs
 open BenchmarkDotNet.Columns
 open Perfolizer.Horology
 open AdventOfCode.Days
+open Perfolizer.Metrology
 
 module Program =
 
