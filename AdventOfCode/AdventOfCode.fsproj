@@ -338,6 +338,13 @@
     <Content Include="Days\2023\Input\22.txt" />
     <Content Include="Days\2023\Input\23.txt" />
     <Content Include="Days\2024\Input\01.txt" />
+    <Content Include="Days\2024\Input\02.txt" />
+    <Content Include="Days\2024\Input\03.txt" />
+    <Content Include="Days\2024\Input\04.txt" />
+    <Content Include="Days\2024\Input\05.txt" />
+    <Content Include="Days\2024\Input\06.txt" />
+    <Content Include="Days\2024\Input\07.txt" />
+    <Content Include="Days\2024\Input\08.txt" />
     <Compile Include="Days\2020\Day01.fs" />
     <Compile Include="Days\2020\Day02.fs" />
     <Compile Include="Days\2020\Day03.fs" />
@@ -443,7 +450,6 @@
     <PackageReference Include="FSharp.Collections.ParallelSeq" Version="1.2.0" />
     <PackageReference Include="FSharp.HashCollections" Version="0.3.1" />
     <PackageReference Include="FSharpx.Collections" Version="3.0.1" />
-    <PackageReference Include="GeneticSharp" Version="2.6.0" />
     <PackageReference Include="MathNet.Numerics.FSharp" Version="5.0.0-alpha08" />
     <PackageReference Include="morelinq" Version="3.3.2" />
     <PackageReference Include="OptimizedPriorityQueue" Version="5.1.0" />
