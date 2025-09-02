@@ -44,7 +44,7 @@ let getDay (year, day) =
 // Use to generate Days.csv
 let GetDays() =
     let days =
-        ([2024 .. 2024], [1 .. 25])
+        ([2015 .. 2024], [1 .. 25])
         ||> List.allPairs 
         |> List.map getDay
 

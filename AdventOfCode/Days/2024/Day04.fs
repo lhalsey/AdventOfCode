@@ -18,6 +18,7 @@ module Day04 =
         |> Seq.zip word
         |> Seq.forall (fun (x, y) -> Some x = y)
 
+    // Take a look at the little Elf's word search. How many times does XMAS appear?
     let Part1() =
         let grid = parseInput()
 
@@ -30,6 +31,8 @@ module Day04 =
         |> Seq.sumBy (fun x -> getCountForCell x.Key)
         
 
+    // Flip the word search from the instructions back over to the word search side and try again.
+    // How many times does an X-MAS appear?
     let Part2() =
         let grid = parseInput()
 

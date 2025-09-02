@@ -73,6 +73,8 @@ module Utility =
 
     let trim (s: string) = s.Trim()
 
+    let trimStart (c: char) (s: string) = s.TrimStart(c)
+
     let contains (sub: string) (s: string) = s.Contains (sub, StringComparison.CurrentCultureIgnoreCase)
 
     let charsToStr (c: char seq) = c |> Seq.toArray |> String

@@ -12,6 +12,7 @@ module Day01 =
 
     let parseInput() = getFile (2024, 1) |> readLinesAs parseRow |> Seq.toList
 
+    // Your actual left and right lists contain many location IDs. What is the total distance between your lists?
     let Part1() =
 
         let (l1, l2) = parseInput() |> List.unzip
@@ -19,6 +20,7 @@ module Day01 =
         List.zip (List.sort l1) (List.sort l2)
         |> List.sumBy (fun (x, y) -> abs (x - y))
 
+    // Once again consider your left and right lists. What is their similarity score?
     let Part2() =
 
         let (l1, l2) = parseInput() |> List.unzip

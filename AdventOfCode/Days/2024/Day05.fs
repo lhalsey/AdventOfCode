@@ -74,7 +74,8 @@ module Day05 =
 
     let getMidValues (elems: string list list) = elems |> List.map (fun x -> x[x.Length / 2]) |> List.sumBy int
 
-
+    // Determine which updates are already in the correct order. What do you get if you add up the middle page
+    // number from those correctly-ordered updates?
     let Part1() =
         let (orderMap, production) = getProblem()
 
@@ -82,6 +83,8 @@ module Day05 =
         |> List.filter (isValid orderMap)
         |> getMidValues
 
+    // Find the updates which are not in the correct order. What do you get if you add up the middle page
+    // numbers after correctly ordering just those updates?
     let Part2() =
         let (orderMap, production) = getProblem()
 

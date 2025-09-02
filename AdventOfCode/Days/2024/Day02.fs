@@ -19,7 +19,7 @@ module Day02 =
 
     let getCombos (elems: int list) = // Remove one element for each combo
         [0 .. elems.Length - 1]
-        |> List.map (fun x -> elems[0..(x - 1)] @ elems[(x + 1)..])
+        |> List.map (fun x -> elems[..(x - 1)] @ elems[(x + 1)..])
 
     // Analyze the unusual data from the engineers. How many reports are safe?
     let Part1() = parseInput() |> countIf isStable
